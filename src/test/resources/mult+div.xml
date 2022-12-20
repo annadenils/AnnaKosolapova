@@ -1,0 +1,11 @@
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd" >
+
+<suite name="Mult+DivSuite" verbose="1" >
+    <test name="Mult+DivTests" >
+        <classes>
+            <class name="DivTest">
+            </class>
+            <class name="MultTest"/>
+        </classes>
+    </test>
+</suite>
