@@ -1,3 +1,5 @@
+package hw1;
+
 import org.testng.Assert;
 import org.testng.annotations.DataProvider;
 import org.testng.annotations.Test;
@@ -15,7 +17,7 @@ public class DivTest extends StartTest{
 
     @Test(dataProvider = "divData")
     public void divTest(double t, double u, double result){
-        var act = calculator.div(t, u);
+        double act = calculator.div(t, u);
         Assert.assertEquals(act, result, 0.0001);
     }
 }

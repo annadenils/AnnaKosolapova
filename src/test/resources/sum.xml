@@ -3,7 +3,7 @@
 <suite name="SumSuite" verbose="1" >
     <test name="sumTests" >
         <classes>
-            <class name="SumTest" />
+            <class name="hw1.SumTest" />
         </classes>
     </test>
 </suite>

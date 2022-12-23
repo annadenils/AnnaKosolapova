@@ -1,3 +1,5 @@
+package hw1;
+
 import org.testng.Assert;
 import org.testng.annotations.DataProvider;
 import org.testng.annotations.Test;
@@ -14,7 +16,7 @@ public class SubTest extends StartTest{
 
     @Test(dataProvider = "subData")
     public void subTest(double d, double c, double result){
-        var act = calculator.sub(d,c);
+        double act = calculator.sub(d,c);
         Assert.assertEquals(act, result, 0.0001);
     }
 }

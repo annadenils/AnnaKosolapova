@@ -1,3 +1,5 @@
+package hw1;
+
 import org.testng.Assert;
 import org.testng.annotations.DataProvider;
 import org.testng.annotations.Test;
@@ -15,7 +17,7 @@ public class MultTest extends StartTest{
 
     @Test(dataProvider = "multData")
     public void multTest(double x, double y, double result){
-        var act = calculator.mult(x,y);
+        double act = calculator.mult(x,y);
         Assert.assertEquals(act, result, 0.0001);
     }
 

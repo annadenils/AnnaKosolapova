@@ -3,9 +3,9 @@
 <suite name="Mult+DivSuite" verbose="1" >
     <test name="Mult+DivTests" >
         <classes>
-            <class name="DivTest">
+            <class name="hw1.DivTest">
             </class>
-            <class name="MultTest"/>
+            <class name="hw1.MultTest"/>
         </classes>
     </test>
 </suite>
