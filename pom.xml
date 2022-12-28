@@ -155,6 +155,15 @@
                 <suiteXmlFiles>allTests.xml</suiteXmlFiles>
             </properties>
         </profile>
+        <profile>
+            <id>Tests3</id>
+            <activation>
+                <activeByDefault>false</activeByDefault>
+            </activation>
+            <properties>
+                <suiteXmlFiles>test3.xml</suiteXmlFiles>
+            </properties>
+        </profile>
     </profiles>
 
 </project>

@@ -4,9 +4,12 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="6bd5c8ab-599e-4d00-8265-512d9c9d0c91" name="Changes" comment="homework 2">
+    <list default="true" id="6bd5c8ab-599e-4d00-8265-512d9c9d0c91" name="Changes" comment="homework1">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/hw3/DriverTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/hw3/BaseTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/hw3/LoginPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/hw3/LoginPage.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/hw3/TestsEx1.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/hw3/TestsEx1.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -24,7 +27,7 @@
   <component name="Git.Settings">
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
-        <entry key="$PROJECT_DIR$" value="main" />
+        <entry key="$PROJECT_DIR$" value="homework2v2" />
       </map>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -45,26 +48,24 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "settings.editor.selected.configurable": "reference.settings.project.maven.repository.indices"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="RunManager" selected="JUnit.TestsEx1.test3">
-    <configuration name="DriverTest.test" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="TestsEx1" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="Anna_Kosolapova" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="hw2.*" />
+          <option name="PATTERN" value="hw3.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="PACKAGE_NAME" value="hw2" />
-      <option name="MAIN_CLASS_NAME" value="hw2.DriverTest" />
-      <option name="METHOD_NAME" value="test" />
-      <option name="TEST_OBJECT" value="method" />
+      <option name="PACKAGE_NAME" value="hw3" />
+      <option name="MAIN_CLASS_NAME" value="hw3.TestsEx1" />
+      <option name="TEST_OBJECT" value="class" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -101,11 +102,49 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="TestEx1.TestsEx1" type="TestNG" temporary="true" nameIsGenerated="true">
+      <module name="Anna_Kosolapova" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="hw2.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="hw2" />
+      <option name="MAIN_CLASS_NAME" value="hw2.TestEx1" />
+      <option name="METHOD_NAME" value="TestsEx1" />
+      <option name="TEST_OBJECT" value="METHOD" />
+      <properties />
+      <listeners />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="TestEx2.TestsEx2" type="TestNG" temporary="true" nameIsGenerated="true">
+      <module name="Anna_Kosolapova" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="hw2.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="hw2" />
+      <option name="MAIN_CLASS_NAME" value="hw2.TestEx2" />
+      <option name="METHOD_NAME" value="TestsEx2" />
+      <option name="TEST_OBJECT" value="METHOD" />
+      <properties />
+      <listeners />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <recent_temporary>
       <list>
         <item itemvalue="JUnit.TestsEx1.test3" />
         <item itemvalue="JUnit.TestsEx1.login" />
-        <item itemvalue="JUnit.DriverTest.test" />
+        <item itemvalue="JUnit.TestsEx1" />
+        <item itemvalue="TestNG.TestEx2.TestsEx2" />
+        <item itemvalue="TestNG.TestEx1.TestsEx1" />
       </list>
     </recent_temporary>
   </component>
