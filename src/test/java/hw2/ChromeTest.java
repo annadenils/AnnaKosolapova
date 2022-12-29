@@ -1,41 +1,23 @@
 package hw2;
 
 import org.openqa.selenium.WebDriver;
-
-import io.github.bonigarcia.wdm.WebDriverManager;
+import org.openqa.selenium.chrome.ChromeDriver;
 import org.testng.annotations.AfterClass;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.BeforeMethod;
 
-
 class ChromeTest {
-
-//    WebDriver driver;
-//
-//    @BeforeClass
-//    void setup() {
-//        WebDriverManager.chromedriver().setup();
-//        driver = new ChromeDriver();
-//        String url = "https://jdi-testing.github.io/jdi-light/index.html";
-//        driver.get(url);
-//    }
-//
-//    @AfterClass
-//    void teardown() {
-//        driver.quit();
-//    }
-
     public static final String URL = "https://jdi-testing.github.io/jdi-light/index.html";
     WebDriver driver;
 
     @BeforeClass
     public void beforeClass(){
-        WebDriverManager.chromedriver().setup();
-        driver = WebDriverManager.chromedriver().create();
+        driver = new ChromeDriver();
     }
 
     @BeforeMethod
     public void setUp(){
+        driver.manage().window().maximize();
         driver.get(URL);
     }
 

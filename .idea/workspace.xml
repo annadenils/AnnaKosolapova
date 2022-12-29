@@ -7,6 +7,9 @@
     <list default="true" id="6bd5c8ab-599e-4d00-8265-512d9c9d0c91" name="Changes" comment="homework1">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/hw2/ChromeTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/hw2/ChromeTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/hw2/TestEx1.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/hw2/TestEx1.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/hw2/TestEx2.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/hw2/TestEx2.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
