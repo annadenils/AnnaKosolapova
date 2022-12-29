@@ -5,6 +5,7 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.annotations.AfterClass;
+import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.BeforeMethod;
 
@@ -20,19 +21,15 @@ public class AbstractClass {
         public static List<String> itemLeftMenu = List.of
                 ("Home", "Contact form", "Service", "Metals & Colors", "Elements packs");
 
-        @BeforeClass
-        public void start(){
+        @BeforeMethod
+        public void setup(){
             WebDriverManager.chromedriver().setup();
             driver = new ChromeDriver();
             driver.manage().window().maximize();
-        }
-
-        @BeforeMethod
-        public void setup(){
             driver.get(URL);
         }
 
-        @AfterClass
+        @AfterMethod
         void end() {
             driver.quit();
         }

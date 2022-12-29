@@ -54,7 +54,7 @@
     &quot;settings.editor.selected.configurable&quot;: &quot;editor.preferences.gutterIcons&quot;
   }
 }</component>
-  <component name="RunManager" selected="TestNG.Ex2Test.ex2Tests">
+  <component name="RunManager" selected="TestNG.Ex1Tests">
     <configuration name="Ex1Tests.test3" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="Anna_Kosolapova" />
       <extension name="coverage">
@@ -67,6 +67,23 @@
       <option name="MAIN_CLASS_NAME" value="hw3.Ex1Tests" />
       <option name="METHOD_NAME" value="test3" />
       <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Ex1Tests" type="TestNG" temporary="true" nameIsGenerated="true">
+      <module name="Anna_Kosolapova" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="hw3.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="hw3" />
+      <option name="MAIN_CLASS_NAME" value="hw3.Ex1Tests" />
+      <option name="TEST_OBJECT" value="CLASS" />
+      <properties />
+      <listeners />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -143,49 +160,13 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="TestEx1.TestsEx1" type="TestNG" temporary="true" nameIsGenerated="true">
-      <module name="Anna_Kosolapova" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="hw2.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="hw2" />
-      <option name="MAIN_CLASS_NAME" value="hw2.TestEx1" />
-      <option name="METHOD_NAME" value="TestsEx1" />
-      <option name="TEST_OBJECT" value="METHOD" />
-      <properties />
-      <listeners />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="TestEx2.TestsEx2" type="TestNG" temporary="true" nameIsGenerated="true">
-      <module name="Anna_Kosolapova" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="hw2.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="hw2" />
-      <option name="MAIN_CLASS_NAME" value="hw2.TestEx2" />
-      <option name="METHOD_NAME" value="TestsEx2" />
-      <option name="TEST_OBJECT" value="METHOD" />
-      <properties />
-      <listeners />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="TestNG.Ex1Tests" />
         <item itemvalue="TestNG.Ex2Test.ex2Tests" />
         <item itemvalue="TestNG.Ex1Tests.ex1Tests" />
         <item itemvalue="TestNG.Ex1Tests.test3" />
         <item itemvalue="JUnit.Ex1Tests.test3" />
-        <item itemvalue="TestNG.TestEx1.TestsEx1" />
       </list>
     </recent_temporary>
   </component>
