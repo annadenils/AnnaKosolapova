@@ -8,7 +8,7 @@ import org.testng.annotations.BeforeClass;
 import org.testng.annotations.BeforeMethod;
 
 
-class ChromeTest {
+public class ChromeTest {
 
 //    WebDriver driver;
 //

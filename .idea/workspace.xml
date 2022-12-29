@@ -4,8 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="6bd5c8ab-599e-4d00-8265-512d9c9d0c91" name="Changes" comment="homework 3(example)">
+    <list default="true" id="6bd5c8ab-599e-4d00-8265-512d9c9d0c91" name="Changes" comment="homework 3(smth new)">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/hw2/ChromeTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/hw2/ChromeTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/hw3/LoginPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/hw3/LoginPage.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/hw3/TestsEx1.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/hw3/TestsEx1.java" afterDir="false" />
     </list>
@@ -22,6 +23,9 @@
       </list>
     </option>
   </component>
+  <component name="Git.Merge.Settings">
+    <option name="BRANCH" value="origin/homework2v2" />
+  </component>
   <component name="Git.Settings">
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
@@ -32,13 +36,6 @@
   </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
-  </component>
-  <component name="MavenImportPreferences">
-    <option name="disabledProfiles">
-      <list>
-        <option value="Sum+Sub" />
-      </list>
-    </option>
   </component>
   <component name="MavenImportPreferences">
     <option name="disabledProfiles">
@@ -125,24 +122,6 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="TestEx2.TestsEx2" type="TestNG" temporary="true" nameIsGenerated="true">
-      <module name="Anna_Kosolapova" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="hw2.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="hw2" />
-      <option name="MAIN_CLASS_NAME" value="hw2.TestEx2" />
-      <option name="METHOD_NAME" value="TestsEx2" />
-      <option name="TEST_OBJECT" value="METHOD" />
-      <properties />
-      <listeners />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
     <configuration name="TestEx1.TestsEx1" type="TestNG" temporary="true" nameIsGenerated="true">
       <module name="Anna_Kosolapova" />
       <extension name="coverage">
@@ -179,9 +158,28 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="TestEx2.TestsEx2" type="TestNG" temporary="true" nameIsGenerated="true">
+      <module name="Anna_Kosolapova" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="hw2.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="hw2" />
+      <option name="MAIN_CLASS_NAME" value="hw2.TestEx2" />
+      <option name="METHOD_NAME" value="TestsEx2" />
+      <option name="TEST_OBJECT" value="METHOD" />
+      <properties />
+      <listeners />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="JUnit.ChromeTest.test" />
+        <item itemvalue="JUnit.TestsEx1.test3" />
+        <item itemvalue="TestNG.TestEx1.TestsEx1" />
       </list>
     </recent_temporary>
   </component>
@@ -208,7 +206,14 @@
       <option name="project" value="LOCAL" />
       <updated>1672241780414</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="homework 3(smth new)">
+      <created>1672305993993</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1672305993993</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -225,6 +230,7 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="homework1" />
     <MESSAGE value="homework 3(example)" />
-    <option name="LAST_COMMIT_MESSAGE" value="homework 3(example)" />
+    <MESSAGE value="homework 3(smth new)" />
+    <option name="LAST_COMMIT_MESSAGE" value="homework 3(smth new)" />
   </component>
 </project>

@@ -21,13 +21,13 @@ public class LoginPage {
     @FindBy(id = "user-name")
     private WebElement userName;
 
-    public LoginPage(WebDriver driver){
-        PageFactory.initElements(driver, this);
-    }
-
-    public static LoginPage using(WebDriver driver){
-        return new LoginPage(driver);
-    }
+//    public LoginPage(WebDriver driver){
+//        PageFactory.initElements(driver, this);
+//    }
+//
+//    public static LoginPage using(WebDriver driver){
+//        return new LoginPage(driver);
+//    }
 
     public void login(String username, String password1){
         loginIcon.click();
