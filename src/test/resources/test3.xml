@@ -4,6 +4,7 @@
     <test name="Tests3" >
         <classes>
             <class name="hw3.Ex1Tests" />
+            <class name="hw3.Ex2Test"></class>
         </classes>
     </test>
 </suite>

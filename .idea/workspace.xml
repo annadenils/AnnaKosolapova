@@ -5,13 +5,6 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="6bd5c8ab-599e-4d00-8265-512d9c9d0c91" name="Changes" comment="homework 3(smth new)">
-      <change afterPath="$PROJECT_DIR$/src/main/java/Pages/MainPage.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/hw2/ChromeTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/hw2/ChromeTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/hw3/BaseTest.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/hw3/DriverManager.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/hw3/LoginPage.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/hw3/TestsEx1.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/hw3/Ex1Tests.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/resources/test3.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/resources/test3.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -54,13 +47,13 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "settings.editor.selected.configurable": "editor.preferences.gutterIcons"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;editor.preferences.gutterIcons&quot;
   }
-}]]></component>
+}</component>
   <component name="RunManager" selected="TestNG.Ex2Test.ex2Tests">
     <configuration name="Ex1Tests.test3" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="Anna_Kosolapova" />
