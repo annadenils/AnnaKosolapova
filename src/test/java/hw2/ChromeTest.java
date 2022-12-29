@@ -7,6 +7,8 @@ import org.testng.annotations.AfterClass;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.BeforeMethod;
 
+import java.util.List;
+
 
 public class ChromeTest {
 
@@ -26,7 +28,7 @@ public class ChromeTest {
 //    }
 
     public static final String URL = "https://jdi-testing.github.io/jdi-light/index.html";
-    WebDriver driver;
+    public WebDriver driver;
 
     @BeforeClass
     public void beforeClass(){
