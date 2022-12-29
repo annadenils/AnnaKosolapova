@@ -30,15 +30,16 @@ public class LoginPage {
     }
 
     public void login(String username, String password1){
+        loginIcon.click();
         login.sendKeys(username);
         password.sendKeys(password1);
         loginButton.click();
     }
 
-    public LoginPage LoginIcon(){
-        this.loginIcon.click();
-        return this;
-    }
+//    public LoginPage LoginIcon(){
+//        this.loginIcon.click();
+//        return this;
+//    }
 
     public WebElement getUserName(){
         return userName;

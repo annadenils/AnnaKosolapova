@@ -17,11 +17,10 @@ public class TestsEx1 extends BaseTest {
     public JUnitSoftAssertions softAssertions = new JUnitSoftAssertions();
 
     public void login(){
-//        LoginPage loginPage = new LoginPage(driver);
-//        loginPage.getLoginIcon();
-//        loginPage.login("Roman", "Jdi1234");
-//        String userName = loginPage.getUserName().getText();
-//        softAssertions.assertThat(userName).isEqualTo("ROMAN IOVLEV");
-        LoginPage.using(driver).LoginIcon();
+        LoginPage loginPage = new LoginPage(driver);
+        loginPage.login("Roman", "Jdi1234");
+        String userName = loginPage.getUserName().getText();
+        softAssertions.assertThat(userName).isEqualTo("ROMAN IOVLEV");
+//        LoginPage.using(driver).LoginIcon();
     }
 }
