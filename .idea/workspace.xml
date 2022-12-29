@@ -40,6 +40,13 @@
       </list>
     </option>
   </component>
+  <component name="MavenImportPreferences">
+    <option name="disabledProfiles">
+      <list>
+        <option value="Sum+Sub" />
+      </list>
+    </option>
+  </component>
   <component name="ProjectId" id="2JAyjBAbKbQbhIf1OKY9v6FUxKv" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectViewState">
@@ -136,13 +143,45 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="TestEx1.TestsEx1" type="TestNG" temporary="true" nameIsGenerated="true">
+      <module name="Anna_Kosolapova" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="hw2.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="hw2" />
+      <option name="MAIN_CLASS_NAME" value="hw2.TestEx1" />
+      <option name="METHOD_NAME" value="TestsEx1" />
+      <option name="TEST_OBJECT" value="METHOD" />
+      <properties />
+      <listeners />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="TestEx2.TestsEx2" type="TestNG" temporary="true" nameIsGenerated="true">
+      <module name="Anna_Kosolapova" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="hw2.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="hw2" />
+      <option name="MAIN_CLASS_NAME" value="hw2.TestEx2" />
+      <option name="METHOD_NAME" value="TestsEx2" />
+      <option name="TEST_OBJECT" value="METHOD" />
+      <properties />
+      <listeners />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="JUnit.TestsEx1.test3" />
-        <item itemvalue="JUnit.TestsEx1.login" />
-        <item itemvalue="JUnit.TestsEx1" />
-        <item itemvalue="TestNG.TestEx2.TestsEx2" />
-        <item itemvalue="TestNG.TestEx1.TestsEx1" />
+        <item itemvalue="JUnit.ChromeTest.test" />
       </list>
     </recent_temporary>
   </component>
