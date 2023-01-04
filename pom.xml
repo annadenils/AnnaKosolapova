@@ -177,6 +177,24 @@
             </properties>
         </profile>
         <profile>
+            <id>ex1</id>
+            <activation>
+                <activeByDefault>true</activeByDefault>
+            </activation>
+            <properties>
+                <suiteXmlFiles>TestEx1.xml</suiteXmlFiles>
+            </properties>
+        </profile>
+        <profile>
+            <id>ex2</id>
+            <activation>
+                <activeByDefault>false</activeByDefault>
+            </activation>
+            <properties>
+                <suiteXmlFiles>TestEx2.xml</suiteXmlFiles>
+            </properties>
+        </profile>
+        <profile>
             <id>HW4</id>
             <activation>
                 <activeByDefault>true</activeByDefault>
