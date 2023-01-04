@@ -25,20 +25,13 @@
   <component name="Git.Settings">
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
-        <entry key="$PROJECT_DIR$" value="homework2" />
+        <entry key="$PROJECT_DIR$" value="main" />
       </map>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
-  </component>
-  <component name="MavenImportPreferences">
-    <option name="disabledProfiles">
-      <list>
-        <option value="Sum+Sub" />
-      </list>
-    </option>
   </component>
   <component name="MavenImportPreferences">
     <option name="disabledProfiles">
@@ -76,10 +69,27 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="Task1ForHW4.Task1HW4" type="TestNG" temporary="true" nameIsGenerated="true">
+      <module name="Anna_Kosolapova" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="hw4.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="hw4" />
+      <option name="MAIN_CLASS_NAME" value="hw4.Task1ForHW4" />
+      <option name="METHOD_NAME" value="Task1HW4" />
+      <option name="TEST_OBJECT" value="METHOD" />
+      <properties />
+      <listeners />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <recent_temporary>
       <list>
         <item itemvalue="TestNG.Task1ForHW4.Task1HW4" />
-        <item itemvalue="TestNG.Task1ForHW4" />
         <item itemvalue="JUnit.ChromeTest.test" />
       </list>
     </recent_temporary>

@@ -179,7 +179,7 @@
         <profile>
             <id>ex1</id>
             <activation>
-                <activeByDefault>true</activeByDefault>
+                <activeByDefault>false</activeByDefault>
             </activation>
             <properties>
                 <suiteXmlFiles>TestEx1.xml</suiteXmlFiles>
