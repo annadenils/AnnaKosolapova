@@ -1,18 +1,16 @@
 package hw2;
 
-import org.assertj.core.api.JUnitSoftAssertions;
-import org.junit.Rule;
+
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import org.testng.annotations.Test;
+import org.testng.asserts.SoftAssert;
 
-import java.util.ArrayList;
 import java.util.List;
 
-import static org.assertj.core.api.Assertions.assertThat;
-import static org.junit.jupiter.api.Assertions.assertEquals;
 
 public class TestEx1 extends ChromeTest{
+    SoftAssert softAssert = new SoftAssert();
     @Test
     public void TestsEx1(){
         homepage();
@@ -26,7 +24,7 @@ public class TestEx1 extends ChromeTest{
 
     //step 2 - Assert Browser title
     public void homepage(){
-        assertEquals(driver.getTitle(), "Home Page");
+        softAssert.assertEquals(driver.getTitle(), "Home Page");
     }
 
     //step 3 - Perform login
@@ -37,13 +35,10 @@ public class TestEx1 extends ChromeTest{
         driver.findElement(By.id("password")).sendKeys("Jdi1234");
         driver.findElement(By.id("login-button")).click();
         WebElement loginname = driver.findElement(By.cssSelector("#user-name"));
-        assertEquals(loginname.getText(), "ROMAN IOVLEV");
+        softAssert.assertEquals(loginname.getText(), "ROMAN IOVLEV");
     }
 
     //step 5 - Assert that there are 4 items on the header section are displayed, and they have proper texts
-
-    @Rule
-    public JUnitSoftAssertions softAssertions = new JUnitSoftAssertions();
 
     public void checkHeader(){
         WebElement headerHome = driver.findElement(By.linkText("Home"));
@@ -52,20 +47,20 @@ public class TestEx1 extends ChromeTest{
         WebElement headerMC = driver.findElement(By.linkText("Metals & Colors"));
         List<WebElement> headers = driver.findElements(By.cssSelector("ul[class='uui-navigation nav navbar-nav m-l8']>li"));
         int headerCount = headers.size();
-        assertThat(headerCount).isEqualTo(4);
-        softAssertions.assertThat(headerHome.isDisplayed()).isTrue();
-        softAssertions.assertThat(headerForm.isDisplayed()).isTrue();
-        softAssertions.assertThat(headerService.isDisplayed()).isTrue();
-        softAssertions.assertThat(headerMC.isDisplayed()).isTrue();
+        softAssert.assertEquals(headerCount, 4);
+        softAssert.assertTrue(headerHome.isDisplayed());
+        softAssert.assertTrue(headerForm.isDisplayed());
+        softAssert.assertTrue(headerService.isDisplayed());
+        softAssert.assertTrue(headerMC.isDisplayed());
     }
 
     //step 6 - Assert that there are 4 images on the Index Page, and they are displayed
     public void checkIcons(){
         List<WebElement> icons = driver.findElements(By.className("benefit-icon"));
         int iconCount = icons.size();
-        assertThat(iconCount).isEqualTo(4);
+        softAssert.assertEquals(iconCount, 4);
         for (int i=0; i<iconCount; i++){
-            softAssertions.assertThat(icons.get(i).isDisplayed()).isTrue();
+            softAssert.assertTrue(icons.get(i).isDisplayed());
         }
     }
 
@@ -76,9 +71,9 @@ public class TestEx1 extends ChromeTest{
                         "To be flexible and\ncustomizable ", "To be multiplatform ",
                         "Already have good base\n(about 20 internal and\nsome external projects),\nwish to get more…");
         List<WebElement> curText = driver.findElements(By.className("benefit-icon"));
-        softAssertions.assertThat(expText).isEqualTo(curText);
+        softAssert.assertEquals(expText, curText);
         int textCount = curText.size();
-        softAssertions.assertThat(textCount).isEqualTo(4);
+        softAssert.assertEquals(textCount,4);
     }
 
     //step 8 - Assert that there is the iframe with “Frame Button” exist
@@ -87,7 +82,7 @@ public class TestEx1 extends ChromeTest{
     public void frameButton(){
         driver.switchTo().frame("frame");
         WebElement frameButton = driver.findElement(By.id("frame-button"));
-        softAssertions.assertThat(frameButton.isDisplayed()).isTrue();
+        softAssert.assertTrue(frameButton.isDisplayed());
         driver.switchTo().defaultContent();
     }
 
@@ -97,11 +92,12 @@ public class TestEx1 extends ChromeTest{
                 ("Home", "Contact form", "Service", "Metals & Colors", "Elements packs");
         List<WebElement> leftSection = driver.findElements(By.cssSelector("ul[class='sidebar-menu left']>li"));
         int leftSectionCount = leftSection.size();
-        softAssertions.assertThat(leftSectionCount).isEqualTo(5);
+        softAssert.assertEquals(leftSectionCount, 5);
         for (int i=0; i<leftSectionCount; i++){
-            softAssertions.assertThat(leftSection.get(i).getText()).isEqualTo(itemLeftMenu.get(i));
-            softAssertions.assertThat(leftSection.get(i).isDisplayed()).isTrue();
+            softAssert.assertEquals(leftSection.get(i).getText(), itemLeftMenu.get(i));
+            softAssert.assertTrue(leftSection.get(i).isDisplayed());
         }
+        softAssert.assertAll();
     }
 }
 
