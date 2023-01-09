@@ -4,9 +4,7 @@ import io.qameta.allure.Feature;
 import io.qameta.allure.Story;
 import org.testng.annotations.Test;
 
-import static hw4.DiffElementPage.*;
-
-public class ExerciseTwo extends AbstractForHW4{
+public class ExerciseTwo extends InitialisationForHW4 {
 
     @Story("Main Page Information Framework")
     @Feature("Dropdowns")
@@ -17,15 +15,18 @@ public class ExerciseTwo extends AbstractForHW4{
         assertStep.assertLogin();
         actionStep.clickDropdownServise();
         actionStep.clickDifferentElements();
-        actionStep.checkboxSelect(water);
-        assertStep.elementIsSelected(water);
-        actionStep.checkboxSelect(wind);
-        assertStep.elementIsSelected(wind);
-        actionStep.radiobuttonSelect(selen);
-        assertStep.elementIsSelected(selen);
-        actionStep.dropdownSelect(yellow);
-        assertStep.elementIsSelected(yellow);
-        assertStep.checkLog();
+        actionStep.selectCheckbox("Water");
+        assertStep.checkboxIsSelected("Water");
+        actionStep.selectCheckbox("Wind");
+        assertStep.checkboxIsSelected("Wind");
+        actionStep.radiobuttonSelect("Selen");
+        assertStep.radiobuttonIsSelected("Selen");
+        actionStep.dropdownSelect("Yellow");
+        assertStep.dropdownIsSelected("Yellow");
+        assertStep.checkLogText("Water: condition changed to true");
+        assertStep.checkLogText("Wind: condition changed to true");
+        assertStep.checkLogText("metal: value changed to  Selen");
+        assertStep.checkLogText("Colors: value changed to Yellow");
     }
 
 }

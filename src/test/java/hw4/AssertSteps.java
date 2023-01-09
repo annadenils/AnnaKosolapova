@@ -1,7 +1,6 @@
 package hw4;
 
 import io.qameta.allure.Step;
-import org.assertj.core.api.Assertions;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
@@ -10,10 +9,12 @@ import org.testng.asserts.SoftAssert;
 
 import java.util.List;
 
-public class AssertSteps extends AbstractForHW4{
+
+public class AssertSteps extends InitialisationForHW4 {
 
     protected WebDriver driver;
     protected MainPage mainPage;
+    protected DiffElementPage diffElementPage;
 
     public static List<String> iconsText = List.of
             ("To include good practices\nand ideas from successful\nEPAM project",
@@ -29,7 +30,10 @@ public class AssertSteps extends AbstractForHW4{
     protected AssertSteps(WebDriver driver) {
         this.driver = driver;
         mainPage = PageFactory.initElements(driver, MainPage.class);
+//        diffElementPage = PageFactory.initElements(driver, DiffElementPage.class);
     }
+
+
     SoftAssert softAssert = new SoftAssert();
 
 
@@ -112,33 +116,40 @@ public class AssertSteps extends AbstractForHW4{
         softAssert.assertAll();
     }
 
-    public void elementIsSelected(WebElement element) {
-        Assertions.assertThat(element.isSelected()).isTrue();
+    @Step("Checkbox is selected")
+    public void checkboxIsSelected(String element) {
+        softAssert.assertTrue(diffElementPage.getCheckbox()
+                .stream()
+                .filter(e -> e.getText().equals(element))
+                .findFirst().orElseThrow(()->new RuntimeException("Checkbox with name " + element + " not found"))
+                .isSelected());
     }
 
-//    @Step("checkbox Water is selected")
-//    public void checkboxWaterSelected(){
-//        WebElement water = driver.findElement(By.xpath("//label[text()[contains(., ' Water')]]"));
-//        softAssert.assertTrue(water.isSelected());
-//    }
-//
-//    @Step("checkbox Wind is selected")
-//    public void checkboxWindSelected(){
-//        WebElement wind = driver.findElement(By.xpath("//label[text()[contains(., ' Wind')]]"));
-//        softAssert.assertTrue(wind.isSelected());
-//    }
-//
-//    @Step("Radio-button Selen is selected")
-//    public void radiobuttonSelenSelected(){
-//        WebElement selen = driver.findElement(By.xpath("//label[text()[contains(., ' Selen')]]"));
-//        softAssert.assertTrue(selen.isSelected());
-//    }
-//
-//    @Step("Drop-down Yellow is selected")
-//    public void dropdownYellowSelected(){
-//        WebElement yellow = driver.findElement(By.cssSelector("select > option:nth-child(4)"));
-//        softAssert.assertTrue(yellow.isSelected());
-//    }
+    @Step("Radiobutton is selected")
+    public void radiobuttonIsSelected(String element){
+        softAssert.assertTrue(diffElementPage.getRadiobutton()
+                .stream()
+                .filter(element1 -> element1.getText().equals(element))
+                .findFirst().orElseThrow(()-> new RuntimeException("Radiobutton with name " + element+ " not found"))
+                .isSelected());
+    }
+
+    @Step("Dropdown is selected")
+    public void dropdownIsSelected(String element){
+        softAssert.assertTrue(diffElementPage.getDropdown()
+                .stream()
+                .filter(element1 -> element1.getText().equals(element))
+                .findFirst().orElseThrow(()-> new RuntimeException("Dropdown with name " + element+ " not found"))
+                .isSelected());
+    }
+    @Step("Check log text")
+    public void checkLogText(String element){
+        softAssert.assertTrue(diffElementPage.getLog()
+                .stream()
+                .filter(element1 -> element1.getText().equals(element))
+                .findFirst().orElseThrow(()-> new RuntimeException("Log: " + element + "not found"))
+                .isDisplayed());
+    }
 
     @Step("Check log")
     public void checkLog(){

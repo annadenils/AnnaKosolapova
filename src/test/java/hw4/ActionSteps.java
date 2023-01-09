@@ -7,14 +7,18 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.PageFactory;
 import org.testng.asserts.SoftAssert;
 
-public class ActionSteps extends AbstractForHW4{
+
+public class ActionSteps extends InitialisationForHW4 {
     protected WebDriver driver;
     protected MainPage mainPage;
+    protected DiffElementPage diffElementPage;
 
-    protected ActionSteps(WebDriver driver) {
+
+    public ActionSteps(WebDriver driver) {
         this.driver = driver;
         mainPage = PageFactory.initElements(driver, MainPage.class);
     }
+
     SoftAssert softAssert = new SoftAssert();
 
 
@@ -44,14 +48,32 @@ public class ActionSteps extends AbstractForHW4{
         softAssert.assertEquals(driver.getTitle(), "Different Elements");
     }
 
+
     @Step("Select checkbox")
-    public void checkboxSelect(WebElement element){
-        element.click();
+    public void selectCheckbox(String element) {
+        diffElementPage.getCheckbox()
+                .stream()
+                .filter(element1 -> element1.getText().equals(element))
+                .findFirst().orElseThrow(()->new RuntimeException("Checkbox with name " + element + " not found"))
+                .click();
     }
 
     @Step("Select radio button")
-    public void radiobuttonSelect(WebElement element){
-        element.click();
+    public void radiobuttonSelect(String element){
+        diffElementPage.getRadiobutton()
+                .stream()
+                .filter(element1 -> element1.getText().equals(element))
+                .findFirst().orElseThrow(()-> new RuntimeException("Radiobutton with name " + element+ " not found"))
+                .click();
+    }
+
+    @Step("Select dropdown")
+    public void dropdownSelect(String element){
+        diffElementPage.getDropdown()
+                .stream()
+                .filter(element1 -> element1.getText().equals(element))
+                .findFirst().orElseThrow(()-> new RuntimeException("Dropdown with name " + element+ " not found"))
+                .click();
     }
 
     @Step("Select drop down")

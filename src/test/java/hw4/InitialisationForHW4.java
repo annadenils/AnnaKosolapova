@@ -8,16 +8,21 @@ import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
 
 import java.util.List;
+import java.util.concurrent.TimeUnit;
 
-public class AbstractForHW4{
+
+public class InitialisationForHW4 {
+
+    WebDriver driver;
     public static final String URL = "https://jdi-testing.github.io/jdi-light/index.html";
-    public WebDriver driver;
+
+    ActionSteps actionStep;
+    AssertSteps assertStep;
+
 
     public static List<String> itemHeader = List.of("HOME", "CONTACT FORM", "SERVICE", "METALS & COLORS");
     public static List<String> itemLeftMenu = List.of
             ("Home", "Contact form", "Service", "Metals & Colors", "Elements packs");
-    protected ActionSteps actionStep;
-    protected AssertSteps assertStep;
 
     @BeforeMethod
     public void setup(ITestContext iTestContext){
@@ -25,14 +30,16 @@ public class AbstractForHW4{
         driver = new ChromeDriver();
         iTestContext.setAttribute("driver", driver);
         driver.manage().window().maximize();
+        driver.manage().timeouts().implicitlyWait(2, TimeUnit.SECONDS);
         driver.get(URL);
-        actionStep = new ActionSteps(driver);
         assertStep = new AssertSteps(driver);
+        actionStep = new ActionSteps(driver);
     }
 
     @AfterMethod
     void end() {
         driver.quit();
+        driver = null;
     }
 }
 

@@ -4,44 +4,36 @@ package hw4;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 
+import java.util.List;
+
 public class DiffElementPage {
-    @FindBy(xpath = "//label[text()[contains(., ' Water')]]")
-    public static WebElement water;
 
-    @FindBy(xpath = "//label[text()[contains(., ' Wind')]]")
-    public static WebElement wind;
+    @FindBy(className = "label-checkbox")
+    public List<WebElement> checkbox;
 
-    @FindBy(xpath = "//label[text()[contains(., ' Selen')]]")
-    public static WebElement selen;
+    @FindBy(className = "label-radio")
+    public List<WebElement> radiobutton;
 
-    @FindBy(css = "select > option:nth-child(4)")
-    public static WebElement yellow;
+    @FindBy(className = "colorsppp")
+    public List<WebElement> dropdown;
 
-    @FindBy(xpath = "//*[contains(text(),'Water: condition changed to true')]")
-    public WebElement logWater;
+    @FindBy(className = "panel-body-list logs")
+    public List<WebElement> log;
 
-    @FindBy(xpath = "//*[contains(text(),'Wind: condition changed to true')]")
-    public WebElement logWind;
+    public List<WebElement> getCheckbox() {
+        return checkbox;
+    }
 
-    @FindBy(xpath = "//*[contains(text(),'metal: value changed to  Selen')]")
-    public WebElement logSelen;
+    public List<WebElement> getRadiobutton() {
+        return radiobutton;
+    }
 
-    @FindBy(xpath = "//*[contains(text(),'Colors: value changed to Yellow')]")
-    public WebElement logYellow;
+    public List<WebElement> getDropdown() {
+        return dropdown;
+    }
 
-//    public void clickWater(){
-//        water.click();
-//    }
-//
-//    public void clickWind(){
-//        wind.click();
-//    }
-//
-//    public void clickSelen(){
-//        selen.click();
-//    }
-//
-//    public void setYellow(){
-//        yellow.click();
-//    }
+    public List<WebElement> getLog() {
+        return log;
+    }
+
 }

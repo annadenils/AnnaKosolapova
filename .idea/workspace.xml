@@ -4,14 +4,15 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="6bd5c8ab-599e-4d00-8265-512d9c9d0c91" name="Changes" comment="homework 4 (first step)">
+    <list default="true" id="6bd5c8ab-599e-4d00-8265-512d9c9d0c91" name="Changes" comment="homework 4 (add steps and allure)&#10;homework 2 (changed for maven)">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/hw2/TestEx1.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/hw2/TestEx1.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/hw2/TestEx2.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/hw2/TestEx2.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/hw4/AbstractForHW4.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/hw4/AbstractForHW4.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/hw4/Task1ForHW4.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/hw4/ExerciseOne.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/resources/task1HW4.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/resources/hw4.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/hw4/AbstractForHW4.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/hw4/InitialisationForHW4.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/hw4/ActionSteps.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/hw4/ActionSteps.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/hw4/AssertSteps.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/hw4/AssertSteps.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/hw4/DiffElementPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/hw4/DiffElementPage.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/hw4/ExerciseFail.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/hw4/ExerciseFail.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/hw4/ExerciseOne.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/hw4/ExerciseOne.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/hw4/ExerciseTwo.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/hw4/ExerciseTwo.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -92,7 +93,7 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="ExerciseOne.Task1HW4" type="TestNG" temporary="true" nameIsGenerated="true">
+    <configuration name="ExerciseOne.ExerciseOne" type="TestNG" temporary="true" nameIsGenerated="true">
       <module name="Anna_Kosolapova" />
       <extension name="coverage">
         <pattern>
@@ -102,7 +103,7 @@
       </extension>
       <option name="PACKAGE_NAME" value="hw4" />
       <option name="MAIN_CLASS_NAME" value="hw4.ExerciseOne" />
-      <option name="METHOD_NAME" value="Task1HW4" />
+      <option name="METHOD_NAME" value="ExerciseOne" />
       <option name="TEST_OBJECT" value="METHOD" />
       <properties />
       <listeners />
@@ -167,10 +168,10 @@
     <recent_temporary>
       <list>
         <item itemvalue="TestNG.ExerciseTwo.ExerciseTwo" />
+        <item itemvalue="TestNG.ExerciseOne.ExerciseOne" />
         <item itemvalue="TestNG.TestEx2.TestsEx2" />
         <item itemvalue="TestNG.ExerciseFail.ExerciseOne" />
         <item itemvalue="TestNG.ExerciseOne.exp" />
-        <item itemvalue="TestNG.ExerciseOne.Task1HW4" />
       </list>
     </recent_temporary>
   </component>
@@ -197,7 +198,14 @@
       <option name="project" value="LOCAL" />
       <updated>1672830053639</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="homework 4 (add steps and allure)&#10;homework 2 (changed for maven)">
+      <created>1672920033718</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1672920033718</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -214,6 +222,7 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="homework1" />
     <MESSAGE value="homework 4 (first step)" />
-    <option name="LAST_COMMIT_MESSAGE" value="homework 4 (first step)" />
+    <MESSAGE value="homework 4 (add steps and allure)&#10;homework 2 (changed for maven)" />
+    <option name="LAST_COMMIT_MESSAGE" value="homework 4 (add steps and allure)&#10;homework 2 (changed for maven)" />
   </component>
 </project>

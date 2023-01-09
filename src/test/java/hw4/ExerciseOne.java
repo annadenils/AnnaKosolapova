@@ -2,14 +2,10 @@ package hw4;
 
 import io.qameta.allure.Feature;
 import io.qameta.allure.Story;
-import org.openqa.selenium.support.PageFactory;
 import org.testng.annotations.Test;
-import org.testng.asserts.SoftAssert;
-
-import java.util.List;
 
 
-public class ExerciseOne extends AbstractForHW4{
+public class ExerciseOne extends InitialisationForHW4 {
 
     @Story("Main Page Information Framework")
     @Feature("Main page")
