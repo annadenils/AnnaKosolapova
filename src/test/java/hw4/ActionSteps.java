@@ -12,11 +12,13 @@ public class ActionSteps extends InitialisationForHW4 {
     protected WebDriver driver;
     protected MainPage mainPage;
     protected DiffElementPage diffElementPage;
+    protected HeaderPage headerPage;
 
 
     public ActionSteps(WebDriver driver) {
         this.driver = driver;
         mainPage = PageFactory.initElements(driver, MainPage.class);
+        headerPage = PageFactory.initElements(driver, HeaderPage.class);
     }
 
     SoftAssert softAssert = new SoftAssert();
@@ -39,13 +41,12 @@ public class ActionSteps extends InitialisationForHW4 {
 
     @Step("Dropdown Servise from header")
     public void clickDropdownServise(){
-        driver.findElement(By.className("dropdown-toggle")).click();
+        headerPage.clickService();
     }
 
     @Step("Choose Different Elements")
     public void clickDifferentElements(){
-        driver.findElement(By.partialLinkText("DIFFERENT ELEMENTS")).click();
-        softAssert.assertEquals(driver.getTitle(), "Different Elements");
+        headerPage.clickDiffEl();
     }
 
 
@@ -75,34 +76,4 @@ public class ActionSteps extends InitialisationForHW4 {
                 .findFirst().orElseThrow(()-> new RuntimeException("Dropdown with name " + element+ " not found"))
                 .click();
     }
-
-    @Step("Select drop down")
-    public void dropdownSelect(WebElement element){
-        element.click();
-    }
-
-    @Step("Checkbox Water chosen")
-    public void checkboxWater(){
-        WebElement water = driver.findElement(By.xpath("//label[text()[contains(., ' Water')]]"));
-        water.click();
-    }
-
-    @Step("Checkbox Wind chosen")
-    public void checkboxWind(){
-        WebElement wind = driver.findElement(By.xpath("//label[text()[contains(., ' Wind')]]"));
-        wind.click();
-    }
-
-    @Step("Radiobutton Selen selected")
-    public void radiobuttonSelen(){
-        WebElement selen = driver.findElement(By.xpath("//label[text()[contains(., ' Selen')]]"));
-        selen.click();
-    }
-
-    @Step("Dropdown Yellow selected")
-    public void dropdownYellow(){
-        WebElement yellow = driver.findElement(By.cssSelector("select > option:nth-child(4)"));
-        yellow.click();
-    }
-
 }

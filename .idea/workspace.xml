@@ -4,15 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="6bd5c8ab-599e-4d00-8265-512d9c9d0c91" name="Changes" comment="homework 4 (add steps and allure)&#10;homework 2 (changed for maven)">
+    <list default="true" id="6bd5c8ab-599e-4d00-8265-512d9c9d0c91" name="Changes" comment="homework 4 (without initialisation for DiffElementPage)">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/hw4/AbstractForHW4.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/hw4/InitialisationForHW4.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/hw4/ActionSteps.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/hw4/ActionSteps.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/hw4/AssertSteps.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/hw4/AssertSteps.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/hw4/DiffElementPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/hw4/DiffElementPage.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/hw4/ExerciseFail.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/hw4/ExerciseFail.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/hw4/ExerciseOne.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/hw4/ExerciseOne.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/hw4/ExerciseTwo.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/hw4/ExerciseTwo.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
