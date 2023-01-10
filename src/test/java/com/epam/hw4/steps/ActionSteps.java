@@ -1,10 +1,11 @@
-package hw4.steps;
+package com.epam.hw4.steps;
+
+import static com.epam.hw4.BaseTest.diffElementPage;
+import static com.epam.hw4.BaseTest.headerPage;
+import static com.epam.hw4.BaseTest.mainPage;
 
 import io.qameta.allure.Step;
 import org.openqa.selenium.WebDriver;
-
-import static hw4.BaseTest.*;
-
 
 public class ActionSteps {
     protected WebDriver driver;
@@ -14,27 +15,27 @@ public class ActionSteps {
     }
 
     @Step("Username is loggined")
-    public void login(){
+    public void login() {
         mainPage.login("Roman", "Jdi1234");
     }
 
     @Step("switch to frame")
-    public void switchToFrame(){
+    public void switchToFrame() {
         driver.switchTo().frame("frame");
     }
 
     @Step("Switch to default content")
-    public void switchToDefault(){
+    public void switchToDefault() {
         driver.switchTo().defaultContent();
     }
 
     @Step("Dropdown Servise from header")
-    public void clickDropdownServise(){
+    public void clickDropdownServise() {
         headerPage.clickService();
     }
 
     @Step("Choose Different Elements")
-    public void clickDifferentElements(){
+    public void clickDifferentElements() {
         headerPage.clickDiffEl();
     }
 
@@ -43,25 +44,25 @@ public class ActionSteps {
         diffElementPage.getCheckbox()
                 .stream()
                 .filter(element1 -> element1.getText().equals(element))
-                .findFirst().orElseThrow(()->new RuntimeException("Checkbox with name " + element + " not found"))
+                .findFirst().orElseThrow(() -> new RuntimeException("Checkbox with name " + element + " not found"))
                 .click();
     }
 
     @Step("Select radio button")
-    public void radiobuttonSelect(String element){
+    public void radiobuttonSelect(String element) {
         diffElementPage.getRadiobutton()
                 .stream()
                 .filter(element1 -> element1.getText().equals(element))
-                .findFirst().orElseThrow(()-> new RuntimeException("Radiobutton with name " + element+ " not found"))
+                .findFirst().orElseThrow(() -> new RuntimeException("Radiobutton with name " + element + " not found"))
                 .click();
     }
 
     @Step("Select dropdown")
-    public void dropdownSelect(String element){
+    public void dropdownSelect(String element) {
         diffElementPage.getDropdown()
                 .stream()
                 .filter(element1 -> element1.getText().equals(element))
-                .findFirst().orElseThrow(()-> new RuntimeException("Dropdown with name " + element+ " not found"))
+                .findFirst().orElseThrow(() -> new RuntimeException("Dropdown with name " + element + " not found"))
                 .click();
     }
 }

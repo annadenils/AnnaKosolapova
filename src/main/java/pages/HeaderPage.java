@@ -1,25 +1,21 @@
 package pages;
 
-import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
-import org.openqa.selenium.support.PageFactory;
 
 public class HeaderPage {
 
     @FindBy(className = "dropdown-toggle")
-    public WebElement Service;
+    public WebElement dropdownService;
 
-
-    public void clickService(){
-        Service.click();
+    public void clickService() {
+        dropdownService.click();
     }
 
     @FindBy(xpath = "//li/a[text()='Different elements']")
     public WebElement diffElements;
 
-    public void clickDiffEl(){
+    public void clickDiffEl() {
         diffElements.click();
     }
-
 }

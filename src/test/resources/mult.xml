@@ -3,7 +3,7 @@
 <suite name="MultSuite" verbose="1" >
     <test name="multTests" >
         <classes>
-            <class name="hw1.MultTest" />
+            <class name="com.epam.hw1.MultTest" />
         </classes>
     </test>
 </suite>

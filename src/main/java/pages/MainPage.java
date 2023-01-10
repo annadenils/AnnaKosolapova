@@ -1,9 +1,8 @@
 package pages;
 
+import java.util.List;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
-
-import java.util.List;
 
 public class MainPage {
     @FindBy(id = "user-icon")
@@ -39,30 +38,30 @@ public class MainPage {
     @FindBy(css = "ul[class='sidebar-menu left']>li")
     public List<WebElement> leftMenu;
 
-    public void login(String username, String password1){
+    public void login(String username, String password1) {
         loginIcon.click();
         login.sendKeys(username);
         password.sendKeys(password1);
         loginButton.click();
     }
 
-    public WebElement getUserName(){
+    public WebElement getUserName() {
         return userName;
     }
 
-    public List<WebElement> headerName(){
+    public List<WebElement> headerName() {
         return headerItems;
     }
 
-    public List<WebElement> iconsItems(){
+    public List<WebElement> iconsItems() {
         return iconsItems;
     }
 
-    public List<WebElement> iconsTextItems(){
+    public List<WebElement> iconsTextItems() {
         return iconsTextItems;
     }
 
-    public List<WebElement> leftMenuName(){
+    public List<WebElement> leftMenuName() {
         return leftMenu;
     }
 }

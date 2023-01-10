@@ -3,9 +3,9 @@
 <suite name="Sum+SubSuite" verbose="1" >
     <test name="Sum+SubTests" >
         <classes>
-            <class name="hw1.SumTest">
+            <class name="com.epam.hw1.SumTest">
             </class>
-            <class name="hw1.SubTest"/>
+            <class name="com.epam.hw1.SubTest"/>
         </classes>
     </test>
 </suite>

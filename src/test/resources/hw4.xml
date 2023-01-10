@@ -6,9 +6,9 @@
     </listeners>
     <test name="hw4" >
         <classes>
-            <class name="hw4.ExerciseOne" />
-            <class name="hw4.ExerciseFail"></class>
-            <class name="hw4.ExerciseTwo"></class>
+            <class name="com.epam.hw4.ExerciseOneTest" />
+            <class name="com.epam.hw4.ExerciseFailTest"></class>
+            <class name="com.epam.hw4.ExerciseTwoTest"></class>
         </classes>
     </test>
 </suite>

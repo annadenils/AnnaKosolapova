@@ -1,15 +1,15 @@
-package hw4;
+package com.epam.hw4;
 
 import io.qameta.allure.Feature;
 import io.qameta.allure.Story;
 import org.testng.annotations.Test;
 
-public class ExerciseTwo extends BaseTest {
+public class ExerciseTwoTest extends BaseTest {
 
     @Story("Main Page Information Framework")
     @Feature("Dropdowns")
     @Test
-    public void ExerciseTwo(){
+    public void exerciseTwo() {
         assertStep.browserTitle();
         actionStep.login();
         assertStep.assertLogin();

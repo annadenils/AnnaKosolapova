@@ -1,7 +1,8 @@
-package hw4;
+package com.epam.hw4;
 
-import hw4.steps.ActionSteps;
-import hw4.steps.AssertSteps;
+import com.epam.hw4.steps.ActionSteps;
+import com.epam.hw4.steps.AssertSteps;
+import java.util.concurrent.TimeUnit;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.support.PageFactory;
@@ -11,10 +12,6 @@ import org.testng.annotations.BeforeMethod;
 import pages.DiffElementPage;
 import pages.HeaderPage;
 import pages.MainPage;
-
-import java.util.List;
-import java.util.concurrent.TimeUnit;
-
 
 public class BaseTest {
 
@@ -28,9 +25,9 @@ public class BaseTest {
     public static DiffElementPage diffElementPage;
 
     @BeforeMethod
-    public void setup(ITestContext iTestContext){
+    public void setup(ITestContext testContext) {
         driver = new ChromeDriver();
-        iTestContext.setAttribute("driver", driver);
+        testContext.setAttribute("driver", driver);
         driver.manage().window().maximize();
         driver.manage().timeouts().implicitlyWait(2, TimeUnit.SECONDS);
         driver.get(URL);
@@ -43,8 +40,9 @@ public class BaseTest {
 
     @AfterMethod
     void end() {
-        if (driver != null){
-        driver.quit();}
+        if (driver != null) {
+            driver.quit();
+        }
     }
 }
 

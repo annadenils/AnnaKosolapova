@@ -3,7 +3,7 @@
 <suite name="ex2Suite" verbose="1" >
     <test name="TestEx2" >
         <classes>
-            <class name="hw2.TestEx2" />
+            <class name="com.epam.hw2.TestEx2" />
         </classes>
     </test>
 </suite>
