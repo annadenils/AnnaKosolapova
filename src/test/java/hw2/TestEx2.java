@@ -1,16 +1,15 @@
 package hw2;
 
 import org.assertj.core.api.JUnitSoftAssertions;
-import org.junit.Rule;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import org.testng.annotations.Test;
 
-import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.testng.Assert.assertEquals;
+import static org.testng.Assert.assertTrue;
+
 
 public class TestEx2 extends ChromeTest{
-    @Rule
-    public JUnitSoftAssertions softAssertions = new JUnitSoftAssertions();
 
     @Test
     public void TestsEx2(){
@@ -69,7 +68,7 @@ public class TestEx2 extends ChromeTest{
     public void dropdownYellow(){
         WebElement yellow = driver.findElement(By.cssSelector("select > option:nth-child(4)"));
         yellow.click();
-        softAssertions.assertThat(yellow.isSelected());
+        assertTrue(yellow.isSelected());
 
     }
 

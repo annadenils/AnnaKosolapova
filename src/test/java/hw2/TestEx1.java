@@ -1,7 +1,6 @@
 package hw2;
 
 import org.assertj.core.api.JUnitSoftAssertions;
-import org.junit.Rule;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import org.testng.annotations.Test;
@@ -10,7 +9,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 import static org.assertj.core.api.Assertions.assertThat;
-import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.testng.Assert.assertEquals;
 
 public class TestEx1 extends ChromeTest{
 
@@ -43,8 +42,6 @@ public class TestEx1 extends ChromeTest{
 
     //step 5 - Assert that there are 4 items on the header section are displayed, and they have proper texts
 
-    @Rule
-    public JUnitSoftAssertions softAssertions = new JUnitSoftAssertions();
 
     public void header(){
         WebElement headerHome = driver.findElement(By.linkText("Home"));
@@ -54,10 +51,10 @@ public class TestEx1 extends ChromeTest{
         List<WebElement> headers = driver.findElements(By.cssSelector("ul[class='uui-navigation nav navbar-nav m-l8']>li"));
         int headerCount = headers.size();
         assertThat(headerCount).isEqualTo(4);
-        softAssertions.assertThat(headerHome.isDisplayed());
-        softAssertions.assertThat(headerForm.isDisplayed());
-        softAssertions.assertThat(headerService.isDisplayed());
-        softAssertions.assertThat(headerMC.isDisplayed());
+        assertThat(headerHome.isDisplayed());
+        assertThat(headerForm.isDisplayed());
+        assertThat(headerService.isDisplayed());
+        assertThat(headerMC.isDisplayed());
     }
 
     //step 6 - Assert that there are 4 images on the Index Page, and they are displayed
@@ -71,8 +68,8 @@ public class TestEx1 extends ChromeTest{
         assertThat(iconCount).isEqualTo(4);
         iconPractice.isDisplayed();
         iconCustom.isDisplayed();
-        softAssertions.assertThat(iconMulti.isDisplayed());
-        softAssertions.assertThat(iconBase.isDisplayed());
+        assertThat(iconMulti.isDisplayed());
+        assertThat(iconBase.isDisplayed());
     }
 
     //step 7 - Assert that there are 4 texts on the Index Page under icons and they have proper text
@@ -84,9 +81,9 @@ public class TestEx1 extends ChromeTest{
         expText.add("Already have good base\n" + "(about 20 internal and\n" + "some external projects),\n"
                 + "wish to get more…");
         List<WebElement> curText = driver.findElements(By.className("benefit-icon"));
-        softAssertions.assertThat(expText).isEqualTo(curText);
+        assertThat(expText).isEqualTo(curText);
         int textCount = curText.size();
-        softAssertions.assertThat(textCount).isEqualTo(4);
+        assertThat(textCount).isEqualTo(4);
     }
 
     //step 8 - Assert that there is the iframe with “Frame Button” exist
@@ -110,17 +107,17 @@ public class TestEx1 extends ChromeTest{
                 (By.cssSelector("ul > li:nth-child(5)"));
         List<WebElement> leftSection = driver.findElements(By.cssSelector("ul[class='sidebar-menu left']>li"));
         int leftSectionCount = leftSection.size();
-        softAssertions.assertThat(leftSectionCount).isEqualTo(5);
+        assertThat(leftSectionCount).isEqualTo(5);
         leftHome.isDisplayed();
         leftContact.isDisplayed();
         leftService.isDisplayed();
         leftMC.isDisplayed();
         leftElement.isDisplayed();
-        softAssertions.assertThat(leftHome).isEqualTo("Home");
-        softAssertions.assertThat(leftContact).isEqualTo("Contact form");
-        softAssertions.assertThat(leftService).isEqualTo("Service");
-        softAssertions.assertThat(leftMC).isEqualTo("Metals & Colors");
-        softAssertions.assertThat(leftElement).isEqualTo("Elements packs");
+        assertThat(leftHome).isEqualTo("Home");
+        assertThat(leftContact).isEqualTo("Contact form");
+        assertThat(leftService).isEqualTo("Service");
+        assertThat(leftMC).isEqualTo("Metals & Colors");
+        assertThat(leftElement).isEqualTo("Elements packs");
     }
 
 }
