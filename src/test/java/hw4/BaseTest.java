@@ -1,32 +1,34 @@
 package hw4;
 
-import io.github.bonigarcia.wdm.WebDriverManager;
+import hw4.steps.ActionSteps;
+import hw4.steps.AssertSteps;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.support.PageFactory;
 import org.testng.ITestContext;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
+import pages.DiffElementPage;
+import pages.HeaderPage;
+import pages.MainPage;
 
 import java.util.List;
 import java.util.concurrent.TimeUnit;
 
 
-public class InitialisationForHW4 {
+public class BaseTest {
 
     WebDriver driver;
     public static final String URL = "https://jdi-testing.github.io/jdi-light/index.html";
 
-    ActionSteps actionStep;
-    AssertSteps assertStep;
-
-
-    public static List<String> itemHeader = List.of("HOME", "CONTACT FORM", "SERVICE", "METALS & COLORS");
-    public static List<String> itemLeftMenu = List.of
-            ("Home", "Contact form", "Service", "Metals & Colors", "Elements packs");
+    public static ActionSteps actionStep;
+    public static AssertSteps assertStep;
+    public static MainPage mainPage;
+    public static HeaderPage headerPage;
+    public static DiffElementPage diffElementPage;
 
     @BeforeMethod
     public void setup(ITestContext iTestContext){
-        WebDriverManager.chromedriver().setup();
         driver = new ChromeDriver();
         iTestContext.setAttribute("driver", driver);
         driver.manage().window().maximize();
@@ -34,12 +36,15 @@ public class InitialisationForHW4 {
         driver.get(URL);
         assertStep = new AssertSteps(driver);
         actionStep = new ActionSteps(driver);
+        mainPage = PageFactory.initElements(driver, MainPage.class);
+        headerPage = PageFactory.initElements(driver, HeaderPage.class);
+        diffElementPage = PageFactory.initElements(driver, DiffElementPage.class);
     }
 
     @AfterMethod
     void end() {
-        driver.quit();
-        driver = null;
+        if (driver != null){
+        driver.quit();}
     }
 }
 

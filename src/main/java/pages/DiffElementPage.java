@@ -1,4 +1,4 @@
-package hw4;
+package pages;
 
 
 import org.openqa.selenium.WebElement;
@@ -14,10 +14,10 @@ public class DiffElementPage {
     @FindBy(className = "label-radio")
     public List<WebElement> radiobutton;
 
-    @FindBy(className = "colorsppp")
+    @FindBy(css = ".colors>select > option")
     public List<WebElement> dropdown;
 
-    @FindBy(className = "panel-body-list logs")
+    @FindBy(css = ".panel-body-list.logs")
     public List<WebElement> log;
 
     public List<WebElement> getCheckbox() {

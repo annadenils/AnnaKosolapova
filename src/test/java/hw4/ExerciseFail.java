@@ -3,7 +3,7 @@ package hw4;
 import org.testng.annotations.Test;
 
 
-public class ExerciseFail extends InitialisationForHW4 {
+public class ExerciseFail extends BaseTest {
 
     @Test
     public void ExerciseOne(){

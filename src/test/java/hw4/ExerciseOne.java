@@ -5,7 +5,7 @@ import io.qameta.allure.Story;
 import org.testng.annotations.Test;
 
 
-public class ExerciseOne extends InitialisationForHW4 {
+public class ExerciseOne extends BaseTest {
 
     @Story("Main Page Information Framework")
     @Feature("Main page")

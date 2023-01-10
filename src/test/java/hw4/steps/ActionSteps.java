@@ -1,28 +1,17 @@
-package hw4;
+package hw4.steps;
 
 import io.qameta.allure.Step;
-import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.WebElement;
-import org.openqa.selenium.support.PageFactory;
-import org.testng.asserts.SoftAssert;
+
+import static hw4.BaseTest.*;
 
 
-public class ActionSteps extends InitialisationForHW4 {
+public class ActionSteps {
     protected WebDriver driver;
-    protected MainPage mainPage;
-    protected DiffElementPage diffElementPage;
-    protected HeaderPage headerPage;
-
 
     public ActionSteps(WebDriver driver) {
         this.driver = driver;
-        mainPage = PageFactory.initElements(driver, MainPage.class);
-        headerPage = PageFactory.initElements(driver, HeaderPage.class);
     }
-
-    SoftAssert softAssert = new SoftAssert();
-
 
     @Step("Username is loggined")
     public void login(){
@@ -48,7 +37,6 @@ public class ActionSteps extends InitialisationForHW4 {
     public void clickDifferentElements(){
         headerPage.clickDiffEl();
     }
-
 
     @Step("Select checkbox")
     public void selectCheckbox(String element) {
