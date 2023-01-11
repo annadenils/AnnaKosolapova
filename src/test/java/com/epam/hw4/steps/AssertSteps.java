@@ -30,8 +30,7 @@ public class AssertSteps {
 
     @Step("Assert Browser title")
     public void browserTitle() {
-        softAssert.assertEquals(driver.getTitle(), "Home Page");
-        softAssert.assertAll();
+        assertThat(driver.getTitle()).isEqualTo( "Home Page");
     }
 
     @Step("assertion login")
