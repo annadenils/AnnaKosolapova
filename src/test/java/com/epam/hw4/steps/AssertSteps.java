@@ -1,6 +1,7 @@
 package com.epam.hw4.steps;
 
 
+import static com.epam.hw5.steps.BaseStep.userTablePage;
 import static org.assertj.core.api.Assertions.assertThat;
 import static org.testng.Assert.assertTrue;
 import static testdata.TestData.iconsText;
@@ -137,33 +138,33 @@ public class AssertSteps {
 
     @Step("Dropdown Type are displayed on User Table Page")
     public void checkListOfDropdownTypeOnUserTable(int count) {
-        int listOfDropdownTypeCount = BaseStep.userTablePage.getListOfDropdownTypeOnUserTable().size();
+        int listOfDropdownTypeCount = userTablePage.getListOfDropdownTypeOnUserTable().size();
         assertThat(listOfDropdownTypeCount).isEqualTo(count);
-        assertTrue(BaseStep.userTablePage.getListOfDropdownTypeOnUserTable()
+        assertTrue(userTablePage.getListOfDropdownTypeOnUserTable()
                 .stream().findFirst().orElseThrow(() -> new RuntimeException("dropdown not found")).isDisplayed());
     }
 
     @Step("Users are displayed on User Table Page")
     public void checkListOfUsersOnUserTable(int count) {
-        int listOfUsersCount = BaseStep.userTablePage.listOfUsersOnUserTable.size();
+        int listOfUsersCount = userTablePage.listOfUsersOnUserTable.size();
         assertThat(listOfUsersCount).isEqualTo(count);
-        assertTrue(BaseStep.userTablePage.listOfUsersOnUserTable.stream().findFirst()
+        assertTrue(userTablePage.listOfUsersOnUserTable.stream().findFirst()
                 .orElseThrow(() -> new RuntimeException("Field of users not found")).isDisplayed());
     }
 
     @Step("Descriptions under images are displayed on User Table Page")
     public void checkListOfDescriptionsOnUserTable(int count) {
-        int listOfDescriptionCount = BaseStep.userTablePage.listOfDescriptionOnUserTable.size();
+        int listOfDescriptionCount = userTablePage.listOfDescriptionOnUserTable.size();
         assertThat(listOfDescriptionCount).isEqualTo(count);
-        assertTrue(BaseStep.userTablePage.listOfDescriptionOnUserTable.stream().findFirst()
+        assertTrue(userTablePage.listOfDescriptionOnUserTable.stream().findFirst()
                 .orElseThrow(() -> new RuntimeException("Field of description not found")).isDisplayed());
     }
 
     @Step("Checkboxes are displayed on User Table Page")
     public void checkListOfCheckboxesOnUserTable(int count) {
-        int listOfCheckboxesCount = BaseStep.userTablePage.listOfCheckboxOnUserTable.size();
+        int listOfCheckboxesCount = userTablePage.listOfCheckboxOnUserTable.size();
         assertThat(listOfCheckboxesCount).isEqualTo(count);
-        assertTrue(BaseStep.userTablePage.listOfCheckboxOnUserTable.stream()
+        assertTrue(userTablePage.listOfCheckboxOnUserTable.stream()
                 .findFirst().orElseThrow(() -> new RuntimeException("Field of checkbox not found")).isDisplayed());
     }
 
@@ -171,7 +172,7 @@ public class AssertSteps {
         List<String> numbers = dataTable.column(1);
         List<String> users = dataTable.column(2);
         List<String> description = dataTable.column(3);
-        List<String> usersFromUserPage = BaseStep.userTablePage.listOfUsersOnUserTable
+        List<String> usersFromUserPage = userTablePage.listOfUsersOnUserTable
                 .stream().map(WebElement::getText).collect(Collectors.toList());
         assertThat(users).containsExactlyElementsOf(usersFromUserPage);
     }
@@ -179,7 +180,7 @@ public class AssertSteps {
     @Step("Check contain data from task and dropdown for Roman")
     public void checkDataAndDropdownForRoman(DataTable dataForRoman) {
         List<String> dataFromTask = dataForRoman.column(1);
-        List<String> dropdownForRoman = BaseStep.userTablePage.listOfDropDownForRoman
+        List<String> dropdownForRoman = userTablePage.listOfDropDownForRoman
                 .stream().map(WebElement::getText).collect(Collectors.toList());
         assertThat(dataFromTask).containsExactlyElementsOf(dropdownForRoman);
     }

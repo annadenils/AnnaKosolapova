@@ -3,9 +3,15 @@ package com.epam.hw4.steps;
 import static com.epam.hw4.BaseTest.diffElementPage;
 import static com.epam.hw4.BaseTest.headerPage;
 import static com.epam.hw4.BaseTest.mainPage;
+import static com.epam.hw5.steps.BaseStep.userTablePage;
 
+import com.epam.hw5.steps.BaseStep;
 import io.qameta.allure.Step;
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
+
+import java.util.List;
+import java.util.stream.Collectors;
 
 public class ActionSteps {
     protected WebDriver driver;
@@ -73,5 +79,15 @@ public class ActionSteps {
                 .filter(element1 -> element1.getText().equals(element))
                 .findFirst().orElseThrow(() -> new RuntimeException("Group with name " + element + " not found"))
                 .click();
+    }
+
+    @Step("Select checkbox VIP for Sergey Ivan")
+    public void selectCheckboxForSergeyIvan(String sergeyIvan) {
+        if (sergeyIvan.toLowerCase().contains("sergey ivan")){
+            userTablePage.listOfCheckboxOnUserTable.stream()
+                    .filter(element1 -> element1.getText().equals("ivan"))
+                    .findFirst().orElseThrow(() -> new RuntimeException("checkbox Vip not found"))
+                    .click();
+        }
     }
 }

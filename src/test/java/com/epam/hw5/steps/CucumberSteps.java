@@ -138,4 +138,9 @@ public class CucumberSteps extends Abstract {
     public void droplistShouldContainValuesInColumnTypeForUserRoman(DataTable dataForRoman) {
         assertStep.checkDataAndDropdownForRoman(dataForRoman);
     }
+
+    @When("I select vip checkbox for {string}")
+    public void iSelectVipCheckboxFor(String sergeyIvan) {
+        actionStep.selectCheckboxForSergeyIvan(sergeyIvan);
+    }
 }
