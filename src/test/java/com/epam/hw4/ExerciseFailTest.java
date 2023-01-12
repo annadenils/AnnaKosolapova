@@ -7,7 +7,7 @@ public class ExerciseFailTest extends BaseTest {
 
     @Test
     public void failTest() {
-        assertStep.browserTitle();
+        assertStep.browserTitle("Home Page");
         actionStep.login();
         assertStep.assertLogin();
         assertStep.headerItems();

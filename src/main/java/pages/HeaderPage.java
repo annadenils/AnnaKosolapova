@@ -3,6 +3,8 @@ package pages;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 
+import java.util.List;
+
 public class HeaderPage {
 
     @FindBy(className = "dropdown-toggle")
@@ -17,5 +19,12 @@ public class HeaderPage {
 
     public void clickDiffEl() {
         diffElements.click();
+    }
+
+    @FindBy(css = ".dropdown.open > ul")
+    public List<WebElement> listOfDropdownService;
+
+    public List<WebElement> getListOfDropdownService() {
+        return listOfDropdownService;
     }
 }

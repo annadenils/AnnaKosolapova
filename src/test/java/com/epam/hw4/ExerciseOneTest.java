@@ -11,7 +11,7 @@ public class ExerciseOneTest extends BaseTest {
     @Feature("Main page")
     @Test
     public void exerciseOne() {
-        assertStep.browserTitle();
+        assertStep.browserTitle("Home Page");
         actionStep.login();
         assertStep.assertLogin();
         assertStep.headerItems();

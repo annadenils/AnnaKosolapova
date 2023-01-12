@@ -10,7 +10,7 @@ public class ExerciseTwoTest extends BaseTest {
     @Feature("Dropdowns")
     @Test
     public void exerciseTwo() {
-        assertStep.browserTitle();
+        assertStep.browserTitle("Home Page");
         actionStep.login();
         assertStep.assertLogin();
         actionStep.clickDropdownServise();
@@ -21,7 +21,7 @@ public class ExerciseTwoTest extends BaseTest {
         assertStep.checkboxIsSelected("Wind");
         actionStep.radiobuttonSelect("Selen");
         assertStep.radiobuttonIsSelected("Selen");
-        actionStep.dropdownSelect("Yellow");
+        actionStep.selectFromDropdownInDiffElementsPage("Yellow");
         assertStep.dropdownIsSelected("Yellow");
         assertStep.checkLogText("Water: condition changed to true");
         assertStep.checkLogText("Wind: condition changed to true");

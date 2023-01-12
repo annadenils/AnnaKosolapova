@@ -13,6 +13,7 @@ import org.testng.annotations.BeforeMethod;
 import pages.DiffElementPage;
 import pages.HeaderPage;
 import pages.MainPage;
+import pages.UserTablePage;
 
 import java.util.concurrent.TimeUnit;
 
@@ -25,8 +26,9 @@ public class BaseStep {
     public static MainPage mainPage;
     public static HeaderPage headerPage;
     public static DiffElementPage diffElementPage;
+    public static UserTablePage userTablePage;
 
-    @Before
+//    @Before
     public void setup(ITestContext testContext) {
         driver = new ChromeDriver();
         testContext.setAttribute("driver", driver);
@@ -38,9 +40,10 @@ public class BaseStep {
         mainPage = PageFactory.initElements(driver, MainPage.class);
         headerPage = PageFactory.initElements(driver, HeaderPage.class);
         diffElementPage = PageFactory.initElements(driver, DiffElementPage.class);
+        userTablePage = PageFactory.initElements(driver, UserTablePage.class);
     }
 
-    @After
+//    @After
     void end() {
         if (driver != null) {
             driver.quit();

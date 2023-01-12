@@ -57,12 +57,21 @@ public class ActionSteps {
                 .click();
     }
 
-    @Step("Select dropdown")
-    public void dropdownSelect(String element) {
+    @Step("Select dropdown in Different Elements Page")
+    public void selectFromDropdownInDiffElementsPage(String element) {
         diffElementPage.getDropdown()
                 .stream()
                 .filter(element1 -> element1.getText().equals(element))
                 .findFirst().orElseThrow(() -> new RuntimeException("Dropdown with name " + element + " not found"))
+                .click();
+    }
+
+    @Step("Select from dropdown Service subgroup")
+    public void selectFromDropdownService(String element) {
+        headerPage.getListOfDropdownService()
+                .stream()
+                .filter(element1 -> element1.getText().equals(element))
+                .findFirst().orElseThrow(() -> new RuntimeException("Group with name " + element + " not found"))
                 .click();
     }
 }
