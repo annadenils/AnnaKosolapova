@@ -35,9 +35,4 @@ public class DiffElementPage {
                 .orElseThrow(() -> new RuntimeException(String.format("Dropdown with name %s not found", nameDropdown)));
     }
 
-    public WebElement getLog(String nameLog) {
-        return log.stream().filter(element1 -> element1.getText().contains(nameLog)).findFirst()
-                .orElseThrow(() -> new RuntimeException(String.format("Log with name %s not found", nameLog)));
-    }
-
 }

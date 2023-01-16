@@ -52,6 +52,6 @@ public class Ex2Test extends BaseTest {
         //• for dropdown there is a log row and value is corresponded to the selected value.
         List<String> left = diffElementPage.log.stream().map(WebElement::getText).collect(Collectors.toList());
         softAssert.assertTrue(left.contains(String.valueOf(itemLogs)));
-        softAssert.assertTrue(diffElementPage.getLog(String.valueOf(left)).isDisplayed());
+        diffElementPage.log.forEach(e -> assertTrue(e.isDisplayed()));
     }
 }
