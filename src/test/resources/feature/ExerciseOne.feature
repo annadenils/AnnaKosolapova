@@ -1,8 +1,8 @@
 Feature: Main Page
 
   Scenario: Check Main Page
-    Given Open website
-    And Page title is "Home Page"
+
+    Given Page title is "Home Page"
     When Perform login
     And Check login and user name
     When Open Different Element Page

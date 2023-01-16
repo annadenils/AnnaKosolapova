@@ -4,13 +4,12 @@ package com.epam.hw4.steps;
 import static com.epam.hw5.steps.BaseStep.userTablePage;
 import static org.assertj.core.api.Assertions.assertThat;
 import static org.testng.Assert.assertTrue;
-import static testdata.TestData.iconsText;
-import static testdata.TestData.iconsTextFail;
-import static testdata.TestData.itemHeader;
-import static testdata.TestData.itemLeftMenu;
+import static com.epam.testdata.TestData.iconsText;
+import static com.epam.testdata.TestData.iconsTextFail;
+import static com.epam.testdata.TestData.itemHeader;
+import static com.epam.testdata.TestData.itemLeftMenu;
 
 import com.epam.hw4.BaseTest;
-import com.epam.hw5.steps.BaseStep;
 import io.cucumber.datatable.DataTable;
 import io.qameta.allure.Step;
 import java.util.List;

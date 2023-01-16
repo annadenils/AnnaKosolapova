@@ -1,4 +1,4 @@
-package testdata;
+package com.epam.testdata;
 
 import java.util.List;
 
