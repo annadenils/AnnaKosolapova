@@ -28,22 +28,22 @@ public class Ex1Tests extends BaseTest {
         assertThat(userName).isEqualTo("ROMAN IOVLEV");
 
         //step 5 - Assert that there are 4 items on the header section are displayed, and they have proper texts
-        int headerCount = mainPage.headerName().size();
+        int headerCount = mainPage.headerItems.size();
         assertThat(headerCount).isEqualTo(4);
-        List<String> headerItems = mainPage.headerName()
+        List<String> headerItems = mainPage.headerItems
                 .stream().map(WebElement::getText).collect(Collectors.toList());
         assertThat(headerItems).containsExactlyElementsOf(itemHeader);
-        mainPage.headerName().forEach(e -> assertTrue(e.isDisplayed()));
+        mainPage.headerItems.forEach(e -> assertTrue(e.isDisplayed()));
 
         //step 6 - Assert that there are 4 images on the Index Page, and they are displayed
-        int iconsCount = mainPage.iconsItems().size();
+        int iconsCount = mainPage.iconsItems.size();
         assertEquals(iconsCount, 4);
-        mainPage.iconsItems().forEach(e -> assertTrue(e.isDisplayed()));
+        mainPage.iconsItems.forEach(e -> assertTrue(e.isDisplayed()));
 
         //step 7 - Assert that there are 4 texts on the Index Page under icons, and they have proper text
-        int iconsTextCount = mainPage.iconsTextItems().size();
+        int iconsTextCount = mainPage.iconsTextItems.size();
         assertThat(iconsTextCount).isEqualTo(4);
-        List<String> textUnderIcons = mainPage.iconsTextItems()
+        List<String> textUnderIcons = mainPage.iconsTextItems
                 .stream().map(WebElement::getText).collect(Collectors.toList());
         assertThat(textUnderIcons).containsExactlyElementsOf(iconsText);
 
@@ -56,9 +56,9 @@ public class Ex1Tests extends BaseTest {
         driver.switchTo().defaultContent();
 
         //step 11 - Assert that there are 5 items in the Left Section are displayed, and they have proper text
-        int leftMenuCount = mainPage.leftMenuName().size();
+        int leftMenuCount = mainPage.leftMenu.size();
         assertThat(leftMenuCount).isEqualTo(5);
-        List<String> leftMenuItems = mainPage.leftMenuName()
+        List<String> leftMenuItems = mainPage.leftMenu
                 .stream().map(WebElement::getText).collect(Collectors.toList());
         assertThat(leftMenuItems).containsExactlyElementsOf(itemLeftMenu);
     }

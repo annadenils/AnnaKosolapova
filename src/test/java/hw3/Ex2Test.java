@@ -1,9 +1,16 @@
 package hw3;
 
+import org.openqa.selenium.WebElement;
 import org.testng.annotations.Test;
 import org.testng.asserts.SoftAssert;
 
+import java.util.List;
+import java.util.stream.Collectors;
+
 import static org.assertj.core.api.Assertions.assertThat;
+import static org.testng.Assert.assertTrue;
+import static testdata.TestData.itemLeftMenu;
+import static testdata.TestData.itemLogs;
 
 public class Ex2Test extends BaseTest {
 
@@ -25,86 +32,26 @@ public class Ex2Test extends BaseTest {
         headerPage.clickDiffEl();
 
         //step 6 - Select checkboxes Water, Wind
-        diffElementPage.getCheckbox()
-                .stream()
-                .filter(element1 -> element1.getText().equals("Water"))
-                .findFirst().orElseThrow(() -> new RuntimeException("Checkbox with name " + "Water" + " not found"))
-                .click();
+        diffElementPage.getCheckbox("Water").click();
+        softAssert.assertTrue(diffElementPage.getCheckbox("Water").isSelected());
 
-        softAssert.assertTrue(diffElementPage.getCheckbox()
-                .stream()
-                .filter(e -> e.getText().equals("Water"))
-                .findFirst().orElseThrow(() -> new RuntimeException("Checkbox with name " + "Water" + " not found"))
-                .isSelected());
-
-        diffElementPage.getCheckbox()
-                .stream()
-                .filter(element1 -> element1.getText().equals("Wind"))
-                .findFirst().orElseThrow(() -> new RuntimeException("Checkbox with name " + "Wind" + " not found"))
-                .click();
-
-        softAssert.assertTrue(diffElementPage.getCheckbox()
-                .stream()
-                .filter(e -> e.getText().equals("Wind"))
-                .findFirst().orElseThrow(() -> new RuntimeException("Checkbox with name " + "Wind" + " not found"))
-                .isSelected());
-
+        diffElementPage.getCheckbox("Wind").click();
+        softAssert.assertTrue(diffElementPage.getCheckbox("Wind").isSelected());
 
         //step 7 - Select radio Selen
-        diffElementPage.getRadiobutton()
-                .stream()
-                .filter(element1 -> element1.getText().equals("Selen"))
-                .findFirst().orElseThrow(() -> new RuntimeException("Radiobutton with name " + "Selen" + " not found"))
-                .click();
-
-        softAssert.assertTrue(diffElementPage.getRadiobutton()
-                .stream()
-                .filter(element1 -> element1.getText().equals("Selen"))
-                .findFirst().orElseThrow(() -> new RuntimeException("Radiobutton with name " + "Selen" + " not found"))
-                .isSelected());
+        diffElementPage.getRadiobutton("Selen").click();
+        softAssert.assertTrue(diffElementPage.getRadiobutton("Selen").isSelected());
 
         //step 8 - Select in dropdown Yellow
-        diffElementPage.getDropdown()
-                .stream()
-                .filter(element1 -> element1.getText().equals("Yellow"))
-                .findFirst().orElseThrow(() -> new RuntimeException("Dropdown with name " + "Yellow" + " not found"))
-                .click();
-
-        softAssert.assertTrue(BaseTest.diffElementPage.getDropdown()
-                .stream()
-                .filter(element1 -> element1.getText().equals("Yellow"))
-                .findFirst().orElseThrow(() -> new RuntimeException("Dropdown with name " + "Yellow" + " not found"))
-                .isSelected());
+        diffElementPage.getDropdown("Yellow").click();
+        softAssert.assertTrue(diffElementPage.getDropdown("Yellow").isSelected());
 
         //step 9 -Assert that
         //• for each checkbox there is an individual log row and value is corresponded to the status of checkbox
         //• for radio button there is a log row and value is corresponded to the status of radio button
         //• for dropdown there is a log row and value is corresponded to the selected value.
-        softAssert.assertTrue(BaseTest.diffElementPage.getLog()
-                .stream()
-                .filter(element1 -> element1.getText().contains("Water: condition changed to true"))
-                .findFirst().orElseThrow(() -> new RuntimeException("Log: " + "Water: condition changed to true" + " not found"))
-                .isDisplayed());
-
-        softAssert.assertTrue(BaseTest.diffElementPage.getLog()
-                .stream()
-                .filter(element1 -> element1.getText().contains("Wind: condition changed to true"))
-                .findFirst().orElseThrow(() -> new RuntimeException("Log: " + "Wind: condition changed to true"
-                        + " not found"))
-                .isDisplayed());
-
-        softAssert.assertTrue(BaseTest.diffElementPage.getLog()
-                .stream()
-                .filter(element1 -> element1.getText().contains("metal: value changed to Selen"))
-                .findFirst().orElseThrow(() -> new RuntimeException("Log: " + "metal: value changed to Selen"
-                        + " not found"))
-                .isDisplayed());
-
-        softAssert.assertTrue(BaseTest.diffElementPage.getLog()
-                .stream()
-                .filter(element1 -> element1.getText().contains("Colors: value changed to Yellow"))
-                .findFirst().orElseThrow(() -> new RuntimeException("Log: " + "Colors: value changed to Yellow"
-                        + " not found"))
-                .isDisplayed());
+        List<String> left = diffElementPage.log.stream().map(WebElement::getText).collect(Collectors.toList());
+        softAssert.assertTrue(left.contains(String.valueOf(itemLogs)));
+        softAssert.assertTrue(diffElementPage.getLog(String.valueOf(left)).isDisplayed());
     }
 }

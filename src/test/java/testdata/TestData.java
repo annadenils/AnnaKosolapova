@@ -11,4 +11,7 @@ public class TestData {
     public static List<String> itemHeader = List.of("HOME", "CONTACT FORM", "SERVICE", "METALS & COLORS");
     public static List<String> itemLeftMenu = List.of
             ("Home", "Contact form", "Service", "Metals & Colors", "Elements packs");
+
+    public static List<String> itemLogs = List.of("Water: condition changed to true", "Wind: condition changed to true",
+            "metal: value changed to Selen", "Colors: value changed to Yellow");
 }

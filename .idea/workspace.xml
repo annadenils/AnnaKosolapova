@@ -4,16 +4,14 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="6bd5c8ab-599e-4d00-8265-512d9c9d0c91" name="Changes" comment="homework 3(smth new)">
-      <change afterPath="$PROJECT_DIR$/src/main/java/Pages/DiffElementPage.java" afterDir="false" />
+    <list default="true" id="6bd5c8ab-599e-4d00-8265-512d9c9d0c91" name="Changes" comment="homework5 (third task)">
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_28_12_2022,_14_29_[Changes]/shelved.patch" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_28_12_2022__14_29__Changes_.xml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Pages/DiffElementsPage.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Pages/HeaderPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Pages/HeaderPage.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Pages/MainPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Pages/MainPage.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/hw2/TestEx1.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/hw2/TestEx1.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/hw2/TestEx2.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/hw2/TestEx2.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/hw3/AbstractClass.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/hw3/BaseTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Pages/DiffElementPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pages/DiffElementPage.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Pages/HeaderPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pages/HeaderPage.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Pages/MainPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pages/MainPage.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/testdata/TestData.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/testdata/TestData.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/hw3/Ex1Tests.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/hw3/Ex1Tests.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/hw3/Ex2Test.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/hw3/Ex2Test.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/resources/test3.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/resources/test3.xml" afterDir="false" />
@@ -46,11 +44,6 @@
     <option name="stateVersion" value="1" />
   </component>
   <component name="MavenImportPreferences">
-    <option name="enabledProfiles">
-      <list>
-        <option value="Tests3" />
-      </list>
-    </option>
     <option name="disabledProfiles">
       <list>
         <option value="ex1" />
@@ -75,7 +68,7 @@
       <module name="Anna_Kosolapova" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="Pages.*" />
+          <option name="PATTERN" value="pages.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -108,7 +101,7 @@
       <module name="Anna_Kosolapova" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="Pages.*" />
+          <option name="PATTERN" value="pages.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -126,7 +119,7 @@
       <module name="Anna_Kosolapova" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="Pages.*" />
+          <option name="PATTERN" value="pages.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -242,5 +235,10 @@
     <MESSAGE value="homework 3(example)" />
     <MESSAGE value="homework 3(smth new)" />
     <option name="LAST_COMMIT_MESSAGE" value="homework 3(smth new)" />
+  </component>
+  <component name="com.intellij.coverage.CoverageDataManagerImpl">
+    <SUITE FILE_PATH="coverage/Anna_Kosolapova$Scenario__Check_Main_Page.ic" NAME="Scenario: Check Main Page Coverage Results" MODIFIED="1673436478383" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
+      <FILTER>io.cucumber.core.cli.*</FILTER>
+    </SUITE>
   </component>
 </project>

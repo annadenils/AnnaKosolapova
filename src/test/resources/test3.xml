@@ -3,8 +3,8 @@
 <suite name="test3Suite" verbose="1" >
     <test name="Tests3" >
         <classes>
-            <class name="hw3.Ex1Tests"></class>
-            <class name="hw3.Ex2Test"></class>
+            <class name="hw3.Ex1Tests"/>
+            <class name="hw3.Ex2Test"/>
         </classes>
     </test>
 </suite>
