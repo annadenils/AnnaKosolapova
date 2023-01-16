@@ -20,8 +20,8 @@ public class MainPage {
     @FindBy(id = "user-name")
     private WebElement userName;
 
-    @FindBy(css = "ul[class='uui-navigation nav navbar-nav m-l8']>li")
-    private List<WebElement> headerItems;
+    @FindBy(xpath = "//ul[contains(@class,'m-l8')]/li")
+    public List<WebElement> headerItems;
 
     @FindBy(className = "benefit-icon")
     public List<WebElement> iconsItems;
@@ -49,19 +49,4 @@ public class MainPage {
         return userName;
     }
 
-    public List<WebElement> headerName() {
-        return headerItems;
-    }
-
-    public List<WebElement> iconsItems() {
-        return iconsItems;
-    }
-
-    public List<WebElement> iconsTextItems() {
-        return iconsTextItems;
-    }
-
-    public List<WebElement> leftMenuName() {
-        return leftMenu;
-    }
 }

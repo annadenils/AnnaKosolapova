@@ -3,10 +3,10 @@ package com.epam.hw4.steps;
 
 import static org.assertj.core.api.Assertions.assertThat;
 import static org.testng.Assert.assertTrue;
-import static testdata.TestData.iconsText;
-import static testdata.TestData.iconsTextFail;
-import static testdata.TestData.itemHeader;
-import static testdata.TestData.itemLeftMenu;
+import static com.epam.testdata.TestData.iconsText;
+import static com.epam.testdata.TestData.iconsTextFail;
+import static com.epam.testdata.TestData.itemHeader;
+import static com.epam.testdata.TestData.itemLeftMenu;
 
 import com.epam.hw4.BaseTest;
 import io.qameta.allure.Step;
@@ -42,37 +42,37 @@ public class AssertSteps {
     }
 
     @Step("Items in header")
-    public static void headerItems() {
-        int headerCount = BaseTest.mainPage.headerName().size();
+    public void headerItems() {
+        int headerCount = BaseTest.mainPage.headerItems.size();
         assertThat(headerCount).isEqualTo(4);
-        List<String> headerItems = BaseTest.mainPage.headerName()
+        List<String> headerItems = BaseTest.mainPage.headerItems
                 .stream().map(WebElement::getText).collect(Collectors.toList());
         assertThat(headerItems).containsExactlyElementsOf(itemHeader);
-        BaseTest.mainPage.headerName().forEach(e -> assertTrue(e.isDisplayed()));
+        BaseTest.mainPage.headerItems.forEach(e -> assertTrue(e.isDisplayed()));
     }
 
     @Step("Images on the Index Page")
     public void imagesIndexPage() {
-        int iconsCount = BaseTest.mainPage.iconsItems().size();
+        int iconsCount = BaseTest.mainPage.iconsItems.size();
         softAssert.assertEquals(iconsCount, 4);
-        BaseTest.mainPage.iconsItems().forEach(e -> assertTrue(e.isDisplayed()));
+        BaseTest.mainPage.iconsItems.forEach(e -> assertTrue(e.isDisplayed()));
         softAssert.assertAll();
     }
 
     @Step("Text under images on the Index Page")
     public void textUnderImagesPage() {
-        int iconsTextCount = BaseTest.mainPage.iconsTextItems().size();
+        int iconsTextCount = BaseTest.mainPage.iconsTextItems.size();
         assertThat(iconsTextCount).isEqualTo(4);
-        List<String> textUnderIcons = BaseTest.mainPage.iconsTextItems()
+        List<String> textUnderIcons = BaseTest.mainPage.iconsTextItems
                 .stream().map(WebElement::getText).collect(Collectors.toList());
         assertThat(textUnderIcons).containsExactlyElementsOf(iconsText);
     }
 
     @Step("Text under images on the Index Page (fail)")
     public void textUnderImagesPageFail() {
-        int iconsTextCount = BaseTest.mainPage.iconsTextItems().size();
+        int iconsTextCount = BaseTest.mainPage.iconsTextItems.size();
         assertThat(iconsTextCount).isEqualTo(4);
-        List<String> textUnderIcons = BaseTest.mainPage.iconsTextItems()
+        List<String> textUnderIcons = BaseTest.mainPage.iconsTextItems
                 .stream().map(WebElement::getText).collect(Collectors.toList());
         assertThat(textUnderIcons).containsExactlyElementsOf(iconsTextFail);
     }
@@ -91,16 +91,16 @@ public class AssertSteps {
 
     @Step("Items in the Left Section")
     public void itemsLeftSection() {
-        int leftMenuCount = BaseTest.mainPage.leftMenuName().size();
+        int leftMenuCount = BaseTest.mainPage.leftMenu.size();
         assertThat(leftMenuCount).isEqualTo(5);
-        List<String> leftMenuItems = BaseTest.mainPage.leftMenuName()
+        List<String> leftMenuItems = BaseTest.mainPage.leftMenu
                 .stream().map(WebElement::getText).collect(Collectors.toList());
         assertThat(leftMenuItems).containsExactlyElementsOf(itemLeftMenu);
     }
 
     @Step("Checkbox is selected")
     public void checkboxIsSelected(String element) {
-        softAssert.assertTrue(BaseTest.diffElementPage.getCheckbox()
+        softAssert.assertTrue(BaseTest.diffElementPage.checkbox
                 .stream()
                 .filter(e -> e.getText().equals(element))
                 .findFirst().orElseThrow(() -> new RuntimeException("Checkbox with name " + element + " not found"))
@@ -109,7 +109,7 @@ public class AssertSteps {
 
     @Step("Radiobutton is selected")
     public void radiobuttonIsSelected(String element) {
-        softAssert.assertTrue(BaseTest.diffElementPage.getRadiobutton()
+        softAssert.assertTrue(BaseTest.diffElementPage.radiobutton
                 .stream()
                 .filter(element1 -> element1.getText().equals(element))
                 .findFirst().orElseThrow(() -> new RuntimeException("Radiobutton with name " + element + " not found"))
@@ -118,7 +118,7 @@ public class AssertSteps {
 
     @Step("Dropdown is selected")
     public void dropdownIsSelected(String element) {
-        softAssert.assertTrue(BaseTest.diffElementPage.getDropdown()
+        softAssert.assertTrue(BaseTest.diffElementPage.dropdown
                 .stream()
                 .filter(element1 -> element1.getText().equals(element))
                 .findFirst().orElseThrow(() -> new RuntimeException("Dropdown with name " + element + " not found"))
@@ -127,7 +127,7 @@ public class AssertSteps {
 
     @Step("Check log text")
     public void checkLogText(String element) {
-        softAssert.assertTrue(BaseTest.diffElementPage.getLog()
+        softAssert.assertTrue(BaseTest.diffElementPage.log
                 .stream()
                 .filter(element1 -> element1.getText().contains(element))
                 .findFirst().orElseThrow(() -> new RuntimeException("Log: " + element + " not found"))

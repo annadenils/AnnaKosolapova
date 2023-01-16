@@ -1,5 +1,6 @@
 package com.epam.hw4;
 
+import com.epam.hw4.steps.AssertSteps;
 import io.qameta.allure.Feature;
 import io.qameta.allure.Story;
 import org.testng.annotations.Test;

@@ -41,7 +41,7 @@ public class ActionSteps {
 
     @Step("Select checkbox")
     public void selectCheckbox(String element) {
-        diffElementPage.getCheckbox()
+        diffElementPage.checkbox
                 .stream()
                 .filter(element1 -> element1.getText().equals(element))
                 .findFirst().orElseThrow(() -> new RuntimeException("Checkbox with name " + element + " not found"))
@@ -50,7 +50,7 @@ public class ActionSteps {
 
     @Step("Select radio button")
     public void radiobuttonSelect(String element) {
-        diffElementPage.getRadiobutton()
+        diffElementPage.radiobutton
                 .stream()
                 .filter(element1 -> element1.getText().equals(element))
                 .findFirst().orElseThrow(() -> new RuntimeException("Radiobutton with name " + element + " not found"))
@@ -59,7 +59,7 @@ public class ActionSteps {
 
     @Step("Select dropdown")
     public void dropdownSelect(String element) {
-        diffElementPage.getDropdown()
+        diffElementPage.dropdown
                 .stream()
                 .filter(element1 -> element1.getText().equals(element))
                 .findFirst().orElseThrow(() -> new RuntimeException("Dropdown with name " + element + " not found"))
