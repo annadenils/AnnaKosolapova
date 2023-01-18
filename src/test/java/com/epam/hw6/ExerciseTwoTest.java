@@ -1,6 +1,5 @@
 package com.epam.hw6;
 
-import com.epam.hw4.BaseTest;
 import io.qameta.allure.Feature;
 import io.qameta.allure.Story;
 import org.testng.annotations.Test;

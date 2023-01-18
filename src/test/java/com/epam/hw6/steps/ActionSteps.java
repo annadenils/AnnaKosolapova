@@ -1,11 +1,10 @@
-package com.epam.hw4.steps;
+package com.epam.hw6.steps;
 
-import static com.epam.hw4.BaseTest.diffElementPage;
-import static com.epam.hw4.BaseTest.headerPage;
-import static com.epam.hw4.BaseTest.mainPage;
 
 import io.qameta.allure.Step;
 import org.openqa.selenium.WebDriver;
+
+import static com.epam.hw6.BaseTest.*;
 
 public class ActionSteps {
     protected WebDriver driver;

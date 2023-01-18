@@ -1,20 +1,18 @@
-package com.epam.hw4.steps;
+package com.epam.hw6.steps;
 
 
-import static org.assertj.core.api.Assertions.assertThat;
-import static org.testng.Assert.assertTrue;
-import static com.epam.testdata.TestData.iconsText;
-import static com.epam.testdata.TestData.iconsTextFail;
-import static com.epam.testdata.TestData.itemHeader;
-import static com.epam.testdata.TestData.itemLeftMenu;
-
-import com.epam.hw4.BaseTest;
+import com.epam.hw6.BaseTest;
 import io.qameta.allure.Step;
-import java.util.List;
-import java.util.stream.Collectors;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.testng.asserts.SoftAssert;
+
+import java.util.List;
+import java.util.stream.Collectors;
+
+import static com.epam.testdata.TestData.*;
+import static org.assertj.core.api.Assertions.assertThat;
+import static org.testng.Assert.assertTrue;
 
 
 

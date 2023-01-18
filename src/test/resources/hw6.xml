@@ -13,11 +13,11 @@
     </test>
 
     <test name="hw6 firefox" >
-        <parameter name="browser" value="firefox"/>
+        <parameter name="browser" value="Firefox"/>
 <!--        <parameter name="isLocal" value="true"/>-->
         <classes>
             <class name="com.epam.hw6.ExerciseOneTest" />
-<!--            <class name="com.epam.hw6.ExerciseTwoTest"/>-->
+            <class name="com.epam.hw6.ExerciseTwoTest"/>
         </classes>
     </test>
 </suite>
