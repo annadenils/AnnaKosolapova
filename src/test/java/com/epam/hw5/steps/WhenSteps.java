@@ -5,7 +5,7 @@ import org.openqa.selenium.WebDriver;
 
 import static com.epam.hw5.steps.BaseStep.*;
 
-public class WhenSteps extends BaseStep{
+public class WhenSteps{
 
     protected WebDriver driver;
 

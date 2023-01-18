@@ -1,7 +1,7 @@
 Feature: User Table Page
 
 Scenario: User Table Page test
-#  Given Open website
+  Given Open website
   Given Page title is "Home Page"
   When Perform login
   And Check login and user name

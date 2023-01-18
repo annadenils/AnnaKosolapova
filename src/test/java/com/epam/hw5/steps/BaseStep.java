@@ -1,16 +1,10 @@
 package com.epam.hw5.steps;
 
-import com.epam.hw4.steps.ActionSteps;
-import com.epam.hw4.steps.AssertSteps;
-import io.cucumber.java.After;
-import io.cucumber.java.Before;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.support.PageFactory;
 import org.testng.ITestContext;
-import org.testng.annotations.AfterMethod;
 import org.testng.annotations.AfterTest;
-import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.BeforeTest;
 import pages.DiffElementPage;
 import pages.HeaderPage;

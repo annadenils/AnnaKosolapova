@@ -1,6 +1,5 @@
 package com.epam.hw5.steps;
 
-import com.epam.hw4.BaseTest;
 import io.cucumber.datatable.DataTable;
 import io.cucumber.java.en.And;
 import org.openqa.selenium.WebDriver;
@@ -24,7 +23,7 @@ public class AndSteps {
     }
     @And("Check login and user name")
     public void checkLogin() {
-        String userName = BaseTest.mainPage.getUserName().getText();
+        String userName = mainPage.getUserName().getText();
         assertEquals(userName, "ROMAN IOVLEV");
     }
 

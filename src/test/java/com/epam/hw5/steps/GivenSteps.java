@@ -2,9 +2,6 @@ package com.epam.hw5.steps;
 
 import io.cucumber.java.en.Given;
 import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.chrome.ChromeDriver;
-
-import static com.epam.hw5.steps.BaseStep.URL;
 import static org.assertj.core.api.Assertions.assertThat;
 
 public class GivenSteps{
