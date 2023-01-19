@@ -7,8 +7,8 @@ import static testdata.TestData.iconsText;
 import static testdata.TestData.itemHeader;
 import static testdata.TestData.itemLeftMenu;
 
-import java.util.stream.Collectors;
 import java.util.List;
+import java.util.stream.Collectors;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.PageFactory;
 import org.testng.annotations.Test;

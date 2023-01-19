@@ -75,17 +75,17 @@ public class TestEx2 extends ChromeTest {
     //• for radio button there is a log row and value is corresponded to the status of radio button
     //• for dropdown there is a log row and value is corresponded to the selected value.
     public void log() {
-        WebElement logWater = driver.findElement(By.xpath("//*[contains(text()," +
-                "'Water: condition changed to true')]"));
+        WebElement logWater = driver.findElement(By.xpath("//*[contains(text(),"
+                + "'Water: condition changed to true')]"));
         logWater.isDisplayed();
-        WebElement logWind = driver.findElement(By.xpath("//*[contains(text()," +
-                "'Wind: condition changed to true')]"));
+        WebElement logWind = driver.findElement(By.xpath("//*[contains(text(),"
+                + "'Wind: condition changed to true')]"));
         logWind.isDisplayed();
-        WebElement logSelen = driver.findElement(By.xpath("//*[contains(text()," +
-                "'metal: value changed to  Selen')]"));
+        WebElement logSelen = driver.findElement(By.xpath("//*[contains(text(),"
+                + "'metal: value changed to  Selen')]"));
         logSelen.isDisplayed();
-        WebElement logYellow = driver.findElement(By.xpath("//*[contains(text()," +
-                "'Colors: value changed to Yellow')]"));
+        WebElement logYellow = driver.findElement(By.xpath("//*[contains(text(),"
+                + "'Colors: value changed to Yellow')]"));
         logYellow.isDisplayed();
     }
 }
