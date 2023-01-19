@@ -1,9 +1,9 @@
 package pages;
 
 import org.openqa.selenium.WebElement;
+import java.util.List;
 import org.openqa.selenium.support.FindBy;
 
-import java.util.List;
 
 public class DiffElementPage {
 
@@ -21,12 +21,13 @@ public class DiffElementPage {
 
     public WebElement getCheckbox(String nameCheckbox) {
         return checkbox.stream().filter(element1 -> element1.getText().equals(nameCheckbox)).findFirst()
-                .orElseThrow(() -> new RuntimeException(String.format("Checkbox with name %s not found", nameCheckbox)));
+                .orElseThrow(() -> new RuntimeException(
+                        String.format("Checkbox with name %s not found", nameCheckbox)));
     }
 
     public WebElement getRadiobutton(String nameRadiobutton) {
-        return radiobutton.stream().filter(element1 -> element1.getText().equals(nameRadiobutton)).findFirst()
-                .orElseThrow(() -> new RuntimeException
+        return radiobutton.stream().filter(element1 -> element1.getText().equals(nameRadiobutton))
+                .findFirst().orElseThrow(() -> new RuntimeException
                         (String.format("Radiobutton with name %s not found", nameRadiobutton)));
     }
 

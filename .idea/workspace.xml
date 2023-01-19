@@ -4,7 +4,13 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="6bd5c8ab-599e-4d00-8265-512d9c9d0c91" name="Changes" comment="homework1" />
+    <list default="true" id="6bd5c8ab-599e-4d00-8265-512d9c9d0c91" name="Changes" comment="homework5 (third task)">
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/pages/DiffElementPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pages/DiffElementPage.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/pages/MainPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pages/MainPage.java" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -19,7 +25,7 @@
     </option>
   </component>
   <component name="Git.Merge.Settings">
-    <option name="BRANCH" value="origin/homework2v2" />
+    <option name="BRANCH" value="origin/main" />
   </component>
   <component name="Git.Settings">
     <option name="RECENT_BRANCH_BY_REPOSITORY">
@@ -33,6 +39,11 @@
     <option name="stateVersion" value="1" />
   </component>
   <component name="MavenImportPreferences">
+    <option name="enabledProfiles">
+      <list>
+        <option value="ex2" />
+      </list>
+    </option>
     <option name="disabledProfiles">
       <list>
         <option value="ex1" />
@@ -45,65 +56,24 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;editor.preferences.gutterIcons&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "last_directory_selection": "/Users/anna_kosolapova1/IdeaProjects/Anna_Kosolapova/src/test/java/com/epam/hw7",
+    "project.structure.last.edited": "Modules",
+    "project.structure.proportion": "0.15",
+    "project.structure.side.proportion": "0.2",
+    "settings.editor.selected.configurable": "editor.preferences.gutterIcons"
   }
-}</component>
-  <component name="RunManager" selected="TestNG.Ex2Test.ex2Tests">
-    <configuration name="Ex1Tests.test3" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="Anna_Kosolapova" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="pages.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="hw3" />
-      <option name="MAIN_CLASS_NAME" value="hw3.Ex1Tests" />
-      <option name="METHOD_NAME" value="test3" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="Ex1Tests" type="TestNG" temporary="true" nameIsGenerated="true">
-      <module name="Anna_Kosolapova" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="hw3.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="hw3" />
-      <option name="MAIN_CLASS_NAME" value="hw3.Ex1Tests" />
-      <option name="TEST_OBJECT" value="CLASS" />
-      <properties />
-      <listeners />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="Ex1Tests.ex1Tests" type="TestNG" temporary="true" nameIsGenerated="true">
-      <module name="Anna_Kosolapova" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="pages.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="hw3" />
-      <option name="MAIN_CLASS_NAME" value="hw3.Ex1Tests" />
-      <option name="METHOD_NAME" value="ex1Tests" />
-      <option name="TEST_OBJECT" value="METHOD" />
-      <properties />
-      <listeners />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
+}]]></component>
+  <component name="RecentsManager">
+    <key name="CreateClassDialog.RecentsKey">
+      <recent name="jdi" />
+      <recent name="com.epam.hw7" />
+    </key>
+  </component>
+  <component name="RunManager" selected="TestNG.JDITest">
     <configuration name="Ex1Tests.test3" type="TestNG" temporary="true" nameIsGenerated="true">
       <module name="Anna_Kosolapova" />
       <extension name="coverage">
@@ -140,6 +110,41 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="JDITest" type="TestNG" temporary="true" nameIsGenerated="true">
+      <module name="Anna_Kosolapova" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.epam.hw7.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.epam.hw7" />
+      <option name="MAIN_CLASS_NAME" value="com.epam.hw7.JDITest" />
+      <option name="TEST_OBJECT" value="CLASS" />
+      <properties />
+      <listeners />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="JDITest.jdiTest" type="TestNG" temporary="true" nameIsGenerated="true">
+      <module name="Anna_Kosolapova" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.epam.hw7.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.epam.hw7" />
+      <option name="MAIN_CLASS_NAME" value="com.epam.hw7.JDITest" />
+      <option name="METHOD_NAME" value="jdiTest" />
+      <option name="TEST_OBJECT" value="METHOD" />
+      <properties />
+      <listeners />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="TestEx1.TestsEx1" type="TestNG" temporary="true" nameIsGenerated="true">
       <module name="Anna_Kosolapova" />
       <extension name="coverage">
@@ -160,11 +165,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="TestNG.JDITest" />
+        <item itemvalue="TestNG.JDITest.jdiTest" />
+        <item itemvalue="TestNG.TestEx1.TestsEx1" />
         <item itemvalue="TestNG.Ex2Test.ex2Tests" />
-        <item itemvalue="TestNG.Ex1Tests.ex1Tests" />
-        <item itemvalue="TestNG.Ex1Tests" />
         <item itemvalue="TestNG.Ex1Tests.test3" />
-        <item itemvalue="JUnit.Ex1Tests.test3" />
       </list>
     </recent_temporary>
   </component>
@@ -205,7 +210,14 @@
       <option name="project" value="LOCAL" />
       <updated>1672307193982</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="moved to new package epam.com">
+      <created>1674125453883</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1674125453883</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -223,7 +235,8 @@
     <MESSAGE value="homework1" />
     <MESSAGE value="homework 3(example)" />
     <MESSAGE value="homework 3(smth new)" />
-    <option name="LAST_COMMIT_MESSAGE" value="homework 3(smth new)" />
+    <MESSAGE value="moved to new package epam.com" />
+    <option name="LAST_COMMIT_MESSAGE" value="moved to new package epam.com" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/Anna_Kosolapova$Scenario__Check_Main_Page.ic" NAME="Scenario: Check Main Page Coverage Results" MODIFIED="1673436478383" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
