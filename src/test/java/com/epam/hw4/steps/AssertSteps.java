@@ -3,14 +3,13 @@ package com.epam.hw4.steps;
 
 import static com.epam.hw4.BaseTest.diffElementPage;
 import static com.epam.hw4.BaseTest.mainPage;
-import static org.assertj.core.api.Assertions.assertThat;
-import static org.testng.Assert.assertTrue;
 import static com.epam.testdata.TestData.iconsText;
 import static com.epam.testdata.TestData.iconsTextFail;
 import static com.epam.testdata.TestData.itemHeader;
 import static com.epam.testdata.TestData.itemLeftMenu;
+import static org.assertj.core.api.Assertions.assertThat;
+import static org.testng.Assert.assertTrue;
 
-import com.epam.hw4.BaseTest;
 import io.qameta.allure.Step;
 import java.util.List;
 import java.util.stream.Collectors;
@@ -102,21 +101,21 @@ public class AssertSteps {
 
     @Step("Checkbox is selected")
     public void checkboxIsSelected(String element) {
-        assertTrue(diffElementPage.getCheckbox(element).isSelected());
+        softAssert.assertTrue(diffElementPage.checkbox(element).isSelected());
     }
 
     @Step("Radiobutton is selected")
     public void radiobuttonIsSelected(String element) {
-        assertTrue(diffElementPage.getRadiobutton(element).isSelected());
+        softAssert.assertTrue(diffElementPage.radiobutton(element).isSelected());
     }
 
     @Step("Dropdown is selected")
     public void dropdownIsSelected(String element) {
-        assertTrue(diffElementPage.getDropdown(element).isSelected());
+        softAssert.assertTrue(diffElementPage.dropdown(element).isSelected());
     }
 
     @Step("Check log text")
     public void checkLogText(String element) {
-        softAssert.assertTrue(diffElementPage.getLog(element).isDisplayed());
+        softAssert.assertTrue(diffElementPage.log(element).isDisplayed());
     }
 }

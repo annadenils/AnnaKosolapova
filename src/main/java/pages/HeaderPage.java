@@ -5,17 +5,25 @@ import org.openqa.selenium.support.FindBy;
 
 public class HeaderPage {
 
+    public WebElement getDropdownService() {
+        return dropdownService;
+    }
+
     @FindBy(className = "dropdown-toggle")
-    public WebElement dropdownService;
+    private WebElement dropdownService;
 
     public void clickService() {
-        dropdownService.click();
+        getDropdownService().click();
+    }
+
+    public WebElement getDiffElements() {
+        return diffElements;
     }
 
     @FindBy(xpath = "//li/a[text()='Different elements']")
-    public WebElement diffElements;
+    private WebElement diffElements;
 
     public void clickDiffEl() {
-        diffElements.click();
+        getDiffElements().click();
     }
 }

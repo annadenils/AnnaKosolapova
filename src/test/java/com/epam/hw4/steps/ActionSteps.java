@@ -41,16 +41,16 @@ public class ActionSteps {
 
     @Step("Select checkbox")
     public void selectCheckbox(String element) {
-        diffElementPage.getCheckbox(element).click();
+        diffElementPage.checkbox(element).click();
     }
 
     @Step("Select radio button")
     public void radiobuttonSelect(String element) {
-        diffElementPage.getRadiobutton(element).click();
+        diffElementPage.radiobutton(element).click();
     }
 
     @Step("Select dropdown")
     public void dropdownSelect(String element) {
-        diffElementPage.getDropdown(element).click();
+        diffElementPage.dropdown(element).click();
     }
 }
