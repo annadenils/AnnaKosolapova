@@ -19,4 +19,27 @@ public class DiffElementPage {
     @FindBy(css = ".panel-body-list.logs")
     public List<WebElement> log;
 
+
+    public WebElement getCheckbox(String nameCheckbox) {
+        return checkbox.stream().filter(element1 -> element1.getText().equals(nameCheckbox)).findFirst()
+                .orElseThrow(() -> new RuntimeException(String.format("Checkbox with name %s not found", nameCheckbox)));
+    }
+
+    public WebElement getRadiobutton(String nameRadiobutton) {
+        return radiobutton.stream().filter(element1 -> element1.getText().equals(nameRadiobutton)).findFirst()
+                .orElseThrow(() -> new RuntimeException
+                        (String.format("Radiobutton with name %s not found", nameRadiobutton)));
+    }
+
+    public WebElement getDropdown(String nameDropdown) {
+        return dropdown.stream().filter(element1 -> element1.getText().equals(nameDropdown)).findFirst()
+                .orElseThrow(() -> new RuntimeException(String.format("Dropdown with name %s not found", nameDropdown)));
+    }
+
+    public WebElement getLog(String nameLog) {
+        return log.stream().filter(element1 -> element1.getText().contains(nameLog))
+                .findFirst().orElseThrow(() -> new RuntimeException(String.format("Log: %s not found", nameLog)));
+
+    }
+
 }

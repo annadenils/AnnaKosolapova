@@ -8,7 +8,7 @@ import io.qameta.allure.Step;
 import org.openqa.selenium.WebDriver;
 
 public class ActionSteps {
-    protected WebDriver driver;
+    private final WebDriver driver;
 
     public ActionSteps(WebDriver driver) {
         this.driver = driver;
@@ -41,28 +41,16 @@ public class ActionSteps {
 
     @Step("Select checkbox")
     public void selectCheckbox(String element) {
-        diffElementPage.checkbox
-                .stream()
-                .filter(element1 -> element1.getText().equals(element))
-                .findFirst().orElseThrow(() -> new RuntimeException("Checkbox with name " + element + " not found"))
-                .click();
+        diffElementPage.getCheckbox(element).click();
     }
 
     @Step("Select radio button")
     public void radiobuttonSelect(String element) {
-        diffElementPage.radiobutton
-                .stream()
-                .filter(element1 -> element1.getText().equals(element))
-                .findFirst().orElseThrow(() -> new RuntimeException("Radiobutton with name " + element + " not found"))
-                .click();
+        diffElementPage.getRadiobutton(element).click();
     }
 
     @Step("Select dropdown")
     public void dropdownSelect(String element) {
-        diffElementPage.dropdown
-                .stream()
-                .filter(element1 -> element1.getText().equals(element))
-                .findFirst().orElseThrow(() -> new RuntimeException("Dropdown with name " + element + " not found"))
-                .click();
+        diffElementPage.getDropdown(element).click();
     }
 }
