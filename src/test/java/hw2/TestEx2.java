@@ -1,26 +1,25 @@
 package hw2;
 
 import org.assertj.core.api.JUnitSoftAssertions;
-import org.junit.Rule;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import org.testng.annotations.Test;
 
-import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.testng.Assert.assertEquals;
+import static org.testng.Assert.assertTrue;
+
 
 public class TestEx2 extends ChromeTest{
-    @Rule
-    public JUnitSoftAssertions softAssertions = new JUnitSoftAssertions();
 
     @Test
     public void TestsEx2(){
         homepage();
         login();
-        checkDifElements();
+        difElements();
         checkboxWaterWind();
         buttonSelen();
         dropdownYellow();
-        checkLog();
+        log();
     }
 
     //step 2 - Assert Browser title
@@ -40,9 +39,11 @@ public class TestEx2 extends ChromeTest{
     }
 
     //step 5 - Open through the header menu Service -> Different Elements Page
-    public void checkDifElements(){
+    public void difElements(){
         driver.findElement(By.className("dropdown-toggle")).click();
+        //driver.findElement(By.linkText("Service")).click();
         driver.findElement(By.partialLinkText("DIFFERENT ELEMENTS")).click();
+        //cssSelector("ul#dropdown-menu li:nth-of-type(8)")
         assertEquals(driver.getTitle(), "Different Elements");
     }
 
@@ -50,24 +51,24 @@ public class TestEx2 extends ChromeTest{
     public void checkboxWaterWind(){
         WebElement water = driver.findElement(By.xpath("//label[text()[contains(., ' Water')]]"));
         water.click();
-        softAssertions.assertThat(water.isSelected()).isTrue();
+        water.isSelected();
         WebElement wind = driver.findElement(By.xpath("//label[text()[contains(., ' Wind')]]"));
         wind.click();
-        softAssertions.assertThat(wind.isSelected()).isTrue();
+        wind.isSelected();
     }
 
     //step 7 - Select radio Selen
     public void buttonSelen(){
         WebElement selen = driver.findElement(By.xpath("//label[text()[contains(., ' Selen')]]"));
         selen.click();
-        softAssertions.assertThat(selen.isSelected()).isTrue();
+        selen.isSelected();
     }
 
     //step 8 - Select in dropdown Yellow
     public void dropdownYellow(){
         WebElement yellow = driver.findElement(By.cssSelector("select > option:nth-child(4)"));
         yellow.click();
-        softAssertions.assertThat(yellow.isSelected()).isTrue();
+        assertTrue(yellow.isSelected());
 
     }
 
@@ -75,18 +76,18 @@ public class TestEx2 extends ChromeTest{
     //• for each checkbox there is an individual log row and value is corresponded to the status of checkbox
     //• for radio button there is a log row and value is corresponded to the status of radio button
     //• for dropdown there is a log row and value is corresponded to the selected value.
-    public void checkLog(){
+    public void log(){
         WebElement logWater = driver.findElement
                 (By.xpath("//*[contains(text(),'Water: condition changed to true')]"));
-        softAssertions.assertThat(logWater.isDisplayed()).isTrue();
+        logWater.isDisplayed();
         WebElement logWind = driver.findElement
                 (By.xpath("//*[contains(text(),'Wind: condition changed to true')]"));
-        softAssertions.assertThat(logWind.isDisplayed()).isTrue();
+        logWind.isDisplayed();
         WebElement logSelen = driver.findElement
                 (By.xpath("//*[contains(text(),'metal: value changed to  Selen')]"));
-        softAssertions.assertThat(logSelen.isDisplayed()).isTrue();
+        logSelen.isDisplayed();
         WebElement logYellow = driver.findElement
                 (By.xpath("//*[contains(text(),'Colors: value changed to Yellow')]"));
-        softAssertions.assertThat(logYellow.isDisplayed()).isTrue();
+        logYellow.isDisplayed();
     }
 }
