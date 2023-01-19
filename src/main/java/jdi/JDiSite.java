@@ -2,6 +2,7 @@ package jdi;
 
 import com.epam.jdi.light.elements.pageobjects.annotations.JSite;
 import com.epam.jdi.light.elements.pageobjects.annotations.Url;
+import jdi.objects.MetalsColors;
 import jdi.objects.User;
 import jdi.pages.JDiHomepage;
 import jdi.pages.JDiMetalsColorPage;
@@ -29,5 +30,9 @@ public class JDiSite {
 
     public static void openMetalsColorsPage() {
         jDiMetalsColorPage.open();
+    }
+
+    public static void checkResultOfLogs(MetalsColors metalsColors) {
+        jDiMetalsColorPage.checkLogAfterFill(metalsColors);
     }
 }

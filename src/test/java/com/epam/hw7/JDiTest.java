@@ -28,5 +28,6 @@ public class JDiTest {
         JDiSite.getUserName();
         JDiSite.openMetalsColorsPage();
         JDiSite.jDiMetalsColorPage.fillMetalColorsForm(metalsColors);
+        JDiSite.checkResultOfLogs(metalsColors);
     }
 }

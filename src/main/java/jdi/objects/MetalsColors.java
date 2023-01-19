@@ -2,6 +2,8 @@ package jdi.objects;
 
 import com.epam.jdi.tools.DataClass;
 import com.fasterxml.jackson.annotation.JsonProperty;
+
+import java.util.ArrayList;
 import java.util.List;
 
 public class MetalsColors extends DataClass<MetalsColors> {
@@ -47,6 +49,19 @@ public class MetalsColors extends DataClass<MetalsColors> {
 
     public List<String> getVegetable() {
         return vegetable;
+    }
+
+    public List<String> getLog() {
+        int sumOfNumbers = summary.get(0) + summary.get(1);
+        List<String> result = new ArrayList<>();
+        String elements = String.join(", ", element);
+        String vegetables = String.join(", ", getVegetable());
+        result.add("Color: " + color);
+        result.add("Metal: " + metal);
+        result.add("Summary: " + sumOfNumbers);
+        result.add("Elements: " + elements);
+        result.add("Vegetables: " + vegetables);
+        return result;
     }
 
 
