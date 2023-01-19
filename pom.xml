@@ -185,6 +185,15 @@
                 <suiteXmlFiles>TestEx2.xml</suiteXmlFiles>
             </properties>
         </profile>
+        <profile>
+            <id>JDITest</id>
+            <activation>
+                <activeByDefault>true</activeByDefault>
+            </activation>
+            <properties>
+                <suiteXmlFiles>JDiTest.xml</suiteXmlFiles>
+            </properties>
+        </profile>
     </profiles>
 
 </project>

@@ -9,9 +9,11 @@ import pages.DiffElementPage;
 import pages.HeaderPage;
 import pages.MainPage;
 
+import static org.openqa.selenium.support.PageFactory.initElements;
+
 public class BaseTest {
         public static final String URL = "https://jdi-testing.github.io/jdi-light/index.html";
-        public WebDriver driver;
+        WebDriver driver;
         public static MainPage mainPage;
         public static HeaderPage headerPage;
         public static DiffElementPage diffElementPage;
@@ -21,16 +23,16 @@ public class BaseTest {
             driver = new ChromeDriver();
             driver.manage().window().maximize();
             driver.get(URL);
-            mainPage = PageFactory.initElements(driver, MainPage.class);
-            headerPage = PageFactory.initElements(driver, HeaderPage.class);
-            diffElementPage = PageFactory.initElements(driver, DiffElementPage.class);
+            mainPage = initElements(driver, MainPage.class);
+            headerPage = initElements(driver, HeaderPage.class);
+            diffElementPage = initElements(driver, DiffElementPage.class);
         }
 
         @AfterMethod
         void end() {
-            if(driver != null){
-            driver.quit();
+            if (driver != null) {
+                driver.quit();
             }
         }
-    }
+}
 

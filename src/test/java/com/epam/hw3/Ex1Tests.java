@@ -3,14 +3,16 @@ package com.epam.hw3;
 import static org.assertj.core.api.Assertions.assertThat;
 import static org.testng.Assert.assertEquals;
 import static org.testng.Assert.assertTrue;
-import static testdata.TestData.*;
+import static testdata.TestData.iconsText;
+import static testdata.TestData.itemHeader;
+import static testdata.TestData.itemLeftMenu;
 
+import java.util.stream.Collectors;
+import java.util.List;
 import org.openqa.selenium.WebElement;
-import pages.MainPage;
 import org.openqa.selenium.support.PageFactory;
 import org.testng.annotations.Test;
-import java.util.List;
-import java.util.stream.Collectors;
+import pages.MainPage;
 
 
 public class Ex1Tests extends BaseTest {

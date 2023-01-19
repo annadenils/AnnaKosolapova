@@ -1,15 +1,14 @@
 package com.epam.hw3;
 
-import org.openqa.selenium.WebElement;
-import org.testng.annotations.Test;
-import org.testng.asserts.SoftAssert;
-
-import java.util.List;
-import java.util.stream.Collectors;
-
 import static org.assertj.core.api.Assertions.assertThat;
 import static org.testng.Assert.assertTrue;
 import static testdata.TestData.itemLogs;
+
+import java.util.stream.Collectors;
+import java.util.List;
+import org.openqa.selenium.WebElement;
+import org.testng.annotations.Test;
+import org.testng.asserts.SoftAssert;
 
 public class Ex2Test extends BaseTest {
 

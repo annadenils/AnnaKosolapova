@@ -1,7 +1,7 @@
 package pages;
 
-import org.openqa.selenium.WebElement;
 import java.util.List;
+import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 
 
@@ -27,13 +27,14 @@ public class DiffElementPage {
 
     public WebElement getRadiobutton(String nameRadiobutton) {
         return radiobutton.stream().filter(element1 -> element1.getText().equals(nameRadiobutton))
-                .findFirst().orElseThrow(() -> new RuntimeException
-                        (String.format("Radiobutton with name %s not found", nameRadiobutton)));
+                .findFirst().orElseThrow(() -> new RuntimeException(String.format("Radiobutton with name %s not found",
+                        nameRadiobutton)));
     }
 
     public WebElement getDropdown(String nameDropdown) {
         return dropdown.stream().filter(element1 -> element1.getText().equals(nameDropdown)).findFirst()
-                .orElseThrow(() -> new RuntimeException(String.format("Dropdown with name %s not found", nameDropdown)));
+                .orElseThrow(() -> new RuntimeException(String.format("Dropdown with name %s not found",
+                        nameDropdown)));
     }
 
 }

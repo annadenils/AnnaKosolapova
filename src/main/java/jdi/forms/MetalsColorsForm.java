@@ -39,6 +39,12 @@ public class MetalsColorsForm extends Form<MetalsColorsForm> {
         oddNumbers.select(metalsColors.summary.get(0));
         evenNumbers.select(metalsColors.summary.get(1));
         metalsColors.getElement().forEach(element::select);
+        colors.select(metalsColors.color);
+        metals.select(metalsColors.metal);
+        salad.click();
+        saladList.select("Vegetables");
+        metalsColors.getVegetable().forEach(saladList::select);
+        submit.click();
     }
 
 }

@@ -11,11 +11,11 @@ public class HeaderPage {
     @FindBy(xpath = "//li/a[text()='Different elements']")
     public WebElement diffElements;
 
-    public void clickService(){
+    public void clickService() {
         Service.click();
     }
 
-    public void clickDiffEl(){
+    public void clickDiffEl() {
         diffElements.click();
     }
 }

@@ -4,10 +4,10 @@ import org.testng.Assert;
 import org.testng.annotations.DataProvider;
 import org.testng.annotations.Test;
 
-public class DivTest extends StartTest{
+public class DivTest extends StartTest {
 
     @DataProvider
-    public static Object[][] divData(){
+    public static Object[][] divData() {
         return new Object[][]{
                 {6.0, 2.0, 3.0},
                 {40.0, 4.0, 10.0},
@@ -16,7 +16,7 @@ public class DivTest extends StartTest{
     }
 
     @Test(dataProvider = "divData")
-    public void divTest(double t, double u, double result){
+    public void divTest(double t, double u, double result) {
         double act = calculator.div(t, u);
         Assert.assertEquals(act, result, 0.0001);
     }
