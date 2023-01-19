@@ -3,10 +3,10 @@
 <suite name="Mult+DivSuite" verbose="1" >
     <test name="Mult+DivTests" >
         <classes>
-            <class name="hw1.DivTest"></class>
-            <class name="hw1.SubTest"></class>
-            <class name="hw1.SumTest"></class>
-            <class name="hw1.MultTest"/>
+            <class name="com.epam.hw1.DivTest"></class>
+            <class name="com.epam.hw1.SubTest"></class>
+            <class name="com.epam.hw1.SumTest"></class>
+            <class name="com.epam.hw1.MultTest"/>
         </classes>
     </test>
 </suite>

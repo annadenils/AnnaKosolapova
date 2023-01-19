@@ -1,4 +1,4 @@
-package hw1;
+package com.epam.hw1;
 
 import org.testng.Assert;
 import org.testng.annotations.DataProvider;

@@ -3,7 +3,7 @@
 <suite name="DivSuite" verbose="1" >
     <test name="divTests" >
         <classes>
-            <class name="hw1.DivTest" />
+            <class name="com.epam.hw1.DivTest" />
         </classes>
     </test>
 </suite>

@@ -1,4 +1,4 @@
-package hw3;
+package com.epam.hw3;
 
 import org.openqa.selenium.WebElement;
 import org.testng.annotations.Test;
@@ -9,7 +9,6 @@ import java.util.stream.Collectors;
 
 import static org.assertj.core.api.Assertions.assertThat;
 import static org.testng.Assert.assertTrue;
-import static testdata.TestData.itemLeftMenu;
 import static testdata.TestData.itemLogs;
 
 public class Ex2Test extends BaseTest {

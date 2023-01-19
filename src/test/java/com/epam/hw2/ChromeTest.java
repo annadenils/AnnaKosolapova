@@ -1,4 +1,4 @@
-package hw2;
+package com.epam.hw2;
 
 import org.openqa.selenium.WebDriver;
 

@@ -1,4 +1,4 @@
-package hw3;
+package com.epam.hw3;
 
 import static org.assertj.core.api.Assertions.assertThat;
 import static org.testng.Assert.assertEquals;

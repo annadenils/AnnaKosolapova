@@ -1,6 +1,5 @@
-package hw2;
+package com.epam.hw2;
 
-import org.assertj.core.api.JUnitSoftAssertions;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import org.testng.annotations.Test;
