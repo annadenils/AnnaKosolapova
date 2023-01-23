@@ -26,5 +26,4 @@ public class JDiHomepage extends WebPage {
         return userName.getText();
     }
 
-
 }

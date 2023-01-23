@@ -38,7 +38,7 @@ public class MetalsColorsForm extends Form<MetalsColorsForm> {
     public void setForm(MetalsColors metalsColors) {
         oddNumbers.select(metalsColors.summary.get(0));
         evenNumbers.select(metalsColors.summary.get(1));
-        metalsColors.getElement().forEach(element::select);
+        metalsColors.element.forEach(element::select);
         colors.select(metalsColors.color);
         metals.select(metalsColors.metal);
         salad.click();

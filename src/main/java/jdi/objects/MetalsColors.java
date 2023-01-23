@@ -1,14 +1,14 @@
 package jdi.objects;
 
-import com.epam.jdi.tools.DataClass;
 import com.fasterxml.jackson.annotation.JsonProperty;
+import com.jdiai.tools.DataClass;
 
 import java.util.ArrayList;
 import java.util.List;
 
 public class MetalsColors extends DataClass<MetalsColors> {
     @JsonProperty("summary")
-    public List<Integer> summary;
+    public List<String> summary;
 
     @JsonProperty("elements")
     public List<String> element;
@@ -22,7 +22,7 @@ public class MetalsColors extends DataClass<MetalsColors> {
     @JsonProperty("vegetables")
     public List<String> vegetable;
 
-    public MetalsColors(List<Integer> summary, List<String> element,
+    public MetalsColors(List<String> summary, List<String> element,
                         String color, String metal, List<String> vegetable) {
         this.summary = summary;
         this.element = element;
@@ -31,31 +31,17 @@ public class MetalsColors extends DataClass<MetalsColors> {
         this.vegetable = vegetable;
     }
 
-    public List<Integer> getSummary() {
-        return summary;
-    }
-
-    public List<String> getElement() {
-        return element;
-    }
-
-    public String getColor() {
-        return color;
-    }
-
-    public String getMetal() {
-        return metal;
-    }
+    public MetalsColors() {}
 
     public List<String> getVegetable() {
         return vegetable;
     }
 
     public List<String> getLog() {
-        int sumOfNumbers = summary.get(0) + summary.get(1);
+        int sumOfNumbers = Integer.parseInt(summary.get(0)) + Integer.parseInt(summary.get(1));
         List<String> result = new ArrayList<>();
         String elements = String.join(", ", element);
-        String vegetables = String.join(", ", getVegetable());
+        String vegetables = String.join(", ", vegetable);
         result.add("Color: " + color);
         result.add("Metal: " + metal);
         result.add("Summary: " + sumOfNumbers);

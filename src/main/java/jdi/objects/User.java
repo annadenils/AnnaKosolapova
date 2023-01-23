@@ -4,18 +4,18 @@ public class User {
 
     public static final User ROMAN = new User("Roman", "Jdi1234", "ROMAN IOVLEV");
 
-    private final String name;
+    private final String login;
     private final String password;
     private final String fullName;
 
-    public User(String name, String password, String fullName) {
-        this.name = name;
+    public User(String login, String password, String fullName) {
+        this.login = login;
         this.password = password;
         this.fullName = fullName;
     }
 
     public String getName() {
-        return name;
+        return login;
     }
 
     public String getPassword() {

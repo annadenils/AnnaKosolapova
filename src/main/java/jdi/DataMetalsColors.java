@@ -1,37 +1,43 @@
 package jdi;
 
-import com.fasterxml.jackson.core.JsonProcessingException;
 import com.fasterxml.jackson.core.type.TypeReference;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import jdi.objects.MetalsColors;
+import org.testng.annotations.DataProvider;
 
-import java.lang.reflect.Type;
+import java.io.FileInputStream;
+import java.io.FileNotFoundException;
+import java.io.IOException;
 import java.util.Map;
 
 public class DataMetalsColors {
 
-    Object[][] object;
+    static Object[][] object;
 
-    public Object[][] dataMetalsColors() {
+    @DataProvider()
+    public static Object[][] dataMetalsColors() throws FileNotFoundException {
         String json = "src/test/resources/JDiData.json";
-            try {
-                ObjectMapper objectMapper = new ObjectMapper();
-                Map<String, MetalsColors> jsonMap = objectMapper.readValue(json,
-                        new TypeReference<Map<String, MetalsColors>>() {
-//                            @Override
-//                            public Type getType() {
-//                                return super.getType();
-//                            }
-                        });
+        FileInputStream fileInputStream = new FileInputStream(json);
+        try {
+            ObjectMapper objectMapper = new ObjectMapper();
+            Map<String, MetalsColors> jsonMap = objectMapper.readValue(fileInputStream,
+                        new TypeReference<Map<String, MetalsColors>>() {});
                 int i = 0;
+                object = new Object[jsonMap.size()][1];
                 for (Map.Entry<String, MetalsColors> entry : jsonMap.entrySet()){
                     object[i][0] = entry.getValue();
                     i++;
                 }
+            } catch (IOException e) {
+            throw new RuntimeException(e);
+        } finally {
+            try {
+                if (fileInputStream != null) fileInputStream.close();
+
+            } catch (IOException e) {
+                System.out.println("Failed to close streams");
             }
-                catch (JsonProcessingException e) {
-                throw new RuntimeException(e);
-            }
-            return object;
+        }
+        return object;
         }
     }

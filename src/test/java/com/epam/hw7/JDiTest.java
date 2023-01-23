@@ -8,7 +8,6 @@ import jdi.objects.MetalsColors;
 import jdi.objects.User;
 import org.testng.annotations.AfterSuite;
 import org.testng.annotations.BeforeSuite;
-import org.testng.annotations.DataProvider;
 import org.testng.annotations.Test;
 
 public class JDiTest {
@@ -16,6 +15,8 @@ public class JDiTest {
     @BeforeSuite(alwaysRun = true)
     public void beforeSuite() {
         PageFactory.initSite(JDiSite.class, "chrome");
+        JDiSite.openHomepage();
+        JDiSite.login(User.ROMAN);
     }
 
     @AfterSuite(alwaysRun = true)
@@ -23,10 +24,8 @@ public class JDiTest {
         WebDriverUtils.killAllSeleniumDrivers();
     }
 
-    @Test(dataProviderClass = DataMetalsColors.class)
+    @Test(dataProvider = "dataMetalsColors", dataProviderClass = DataMetalsColors.class)
     public void jdiTest(MetalsColors metalsColors) {
-        JDiSite.openHomepage();
-        JDiSite.login(User.ROMAN);
         JDiSite.getUserName();
         JDiSite.openMetalsColorsPage();
         JDiSite.jDiMetalsColorPage.fillMetalColorsForm(metalsColors);

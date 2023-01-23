@@ -24,8 +24,8 @@ public class JDiSite {
         jDiHomepage.login(user);
     }
 
-    public static String getUserName() {
-        return jDiHomepage.userName();
+    public static void getUserName() {
+        jDiHomepage.userName();
     }
 
     public static void openMetalsColorsPage() {
