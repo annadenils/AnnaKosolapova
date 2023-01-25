@@ -214,12 +214,12 @@
             </properties>
         </profile>
         <profile>
-            <id>hw4</id>
+            <id>hw5</id>
             <activation>
                 <activeByDefault>true</activeByDefault>
             </activation>
             <properties>
-                <suiteXmlFiles>hw4.xml</suiteXmlFiles>
+                <suiteXmlFiles>hw5.xml</suiteXmlFiles>
             </properties>
         </profile>
     </profiles>

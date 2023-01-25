@@ -1,11 +1,16 @@
 package pages;
 
+import java.util.List;
+import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
-
-import java.util.List;
+import org.openqa.selenium.support.PageFactory;
 
 public class UserTablePage {
+
+    public UserTablePage(WebDriver driver) {
+        PageFactory.initElements(driver, this);
+    }
 
     @FindBy(xpath = "//tbody//select")
     public List<WebElement> listOfDropdownTypeOnUserTable;
@@ -26,5 +31,7 @@ public class UserTablePage {
     @FindBy(xpath = "//tbody//tr[1]//td//select")
     public List<WebElement> listOfDropDownForRoman;
 
+    @FindBy(xpath = "//tr//td[1]")
+    public List<WebElement> numberType;
 
 }

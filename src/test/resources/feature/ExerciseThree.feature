@@ -6,6 +6,6 @@ Scenario: Check checkbox vip for Sergey Ivan
   When Perform login
   And Check login and user name
   When I click on Service button in Header
-  And I click on "User Table" button in Service dropdown
+  And I click on User Table button in Service dropdown
   When I select vip checkbox for "Sergey Ivan"
   Then Logs "Vip: condition changed to true" is displayed

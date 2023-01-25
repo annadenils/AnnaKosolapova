@@ -1,11 +1,16 @@
 package pages;
 
+import java.util.List;
+import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
-
-import java.util.List;
+import org.openqa.selenium.support.PageFactory;
 
 public class HeaderPage {
+
+    public HeaderPage(WebDriver driver) {
+        PageFactory.initElements(driver, this);
+    }
 
     @FindBy(className = "dropdown-toggle")
     public WebElement dropdownService;
@@ -19,6 +24,13 @@ public class HeaderPage {
 
     public void clickDiffEl() {
         diffElements.click();
+    }
+
+    @FindBy(xpath = "//li/a[text()='User Table ']")
+    private WebElement userTable;
+
+    public void clickUserTable() {
+        userTable.click();
     }
 
     @FindBy(css = ".dropdown.open > ul")
