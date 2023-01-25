@@ -1,45 +1,25 @@
 package com.epam.hw5.steps;
 
+import java.io.IOException;
 import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.chrome.ChromeDriver;
-import org.openqa.selenium.support.PageFactory;
-import org.testng.ITestContext;
-import org.testng.annotations.AfterTest;
-import org.testng.annotations.BeforeTest;
 import pages.DiffElementPage;
 import pages.HeaderPage;
 import pages.MainPage;
 import pages.UserTablePage;
 
-import java.util.concurrent.TimeUnit;
-
 public class BaseStep {
-    WebDriver driver;
-    public static final String URL = "https://jdi-testing.github.io/jdi-light/index.html";
 
+    public static WebDriver driver;
     public static MainPage mainPage;
     public static HeaderPage headerPage;
     public static DiffElementPage diffElementPage;
     public static UserTablePage userTablePage;
 
+    protected BaseStep(WebDriver driver) throws IOException {}
 
-    @BeforeTest
-    public void before_or_after(ITestContext testContext) {
-        driver = new ChromeDriver();
-        testContext.setAttribute("driver", driver);
-        driver.manage().window().maximize();
-        driver.manage().timeouts().implicitlyWait(2, TimeUnit.SECONDS);
-        driver.get(URL);
-        mainPage = PageFactory.initElements(driver, MainPage.class);
-        headerPage = PageFactory.initElements(driver, HeaderPage.class);
-        diffElementPage = PageFactory.initElements(driver, DiffElementPage.class);
-        userTablePage = PageFactory.initElements(driver, UserTablePage.class);
-    }
+    public BaseStep() throws IOException {}
 
-    @AfterTest
-    void after() {
-        if (driver != null) {
-            driver.quit();
-        }
+    static void openWebSite(String website) {
+        driver.get(website);
     }
 }
