@@ -1,16 +1,16 @@
-package com.epam.hw6.steps;
+package com.epam.hw4.steps;
 
-import static com.epam.hw6.BaseTest.diffElementPage;
-import static com.epam.hw6.BaseTest.headerPage;
-import static com.epam.hw6.BaseTest.mainPage;
+import static com.epam.hw4.StartTest.diffElementPage;
+import static com.epam.hw4.StartTest.headerPage;
+import static com.epam.hw4.StartTest.mainPage;
 
 import io.qameta.allure.Step;
 import org.openqa.selenium.WebDriver;
 
-public class ActionSteps {
+public class ActionsSteps {
     private final WebDriver driver;
 
-    public ActionSteps(WebDriver driver) {
+    public ActionsSteps(WebDriver driver) {
         this.driver = driver;
     }
 
