@@ -12,11 +12,13 @@ import org.testng.annotations.Test;
 
 public class JDiTest {
 
+    public static final User ROMAN = new User("Roman", "Jdi1234", "ROMAN IOVLEV");
+
     @BeforeSuite(alwaysRun = true)
     public void beforeSuite() {
         PageFactory.initSite(JDiSite.class, "chrome");
         JDiSite.openHomepage();
-        JDiSite.login(User.ROMAN);
+        JDiSite.login(ROMAN);
     }
 
     @AfterSuite(alwaysRun = true)
@@ -26,7 +28,7 @@ public class JDiTest {
 
     @Test(dataProvider = "dataMetalsColors", dataProviderClass = DataMetalsColors.class)
     public void jdiTest(MetalsColors metalsColors) {
-        JDiSite.getUserName();
+        JDiSite.getUserName(ROMAN.getFullName());
         JDiSite.openMetalsColorsPage();
         JDiSite.jDiMetalsColorPage.fillMetalColorsForm(metalsColors);
         JDiSite.checkResultOfLogs(metalsColors);

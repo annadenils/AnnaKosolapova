@@ -12,10 +12,9 @@ import java.util.Map;
 
 public class DataMetalsColors {
 
-    static Object[][] object;
-
     @DataProvider()
     public static Object[][] dataMetalsColors() throws FileNotFoundException {
+        Object[][] object;
         String json = "src/test/resources/JDiData.json";
         FileInputStream fileInputStream = new FileInputStream(json);
         try {
@@ -32,7 +31,7 @@ public class DataMetalsColors {
             throw new RuntimeException(e);
         } finally {
             try {
-                if (fileInputStream != null) fileInputStream.close();
+                fileInputStream.close();
 
             } catch (IOException e) {
                 System.out.println("Failed to close streams");

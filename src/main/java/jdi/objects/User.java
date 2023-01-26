@@ -2,8 +2,6 @@ package jdi.objects;
 
 public class User {
 
-    public static final User ROMAN = new User("Roman", "Jdi1234", "ROMAN IOVLEV");
-
     private final String login;
     private final String password;
     private final String fullName;

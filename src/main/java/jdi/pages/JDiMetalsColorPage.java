@@ -17,13 +17,13 @@ public class JDiMetalsColorPage extends WebPage {
     public MetalsColorsForm metalsColorsForm;
 
     public void fillMetalColorsForm(MetalsColors metalsColors) {
-        metalsColorsForm.setForm(metalsColors);
+        metalsColorsForm.fill(metalsColors);
     }
 
     @Css(".results li")
     private WebList log;
 
-    public void checkLogAfterFill(MetalsColors metalsColors) {
+    public void assertResultLog(MetalsColors metalsColors) {
         List<String> actLog = log.stream().map(WebElement::getText).collect(Collectors.toList());
         List<String> log1 = metalsColors.getLog();
         assertThat(actLog).containsAll(log1);

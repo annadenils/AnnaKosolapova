@@ -7,6 +7,8 @@ import jdi.objects.User;
 import jdi.pages.JDiHomepage;
 import jdi.pages.JDiMetalsColorPage;
 
+import static org.assertj.core.api.Assertions.assertThat;
+
 @JSite("https://jdi-testing.github.io/jdi-light/")
 public class JDiSite {
 
@@ -24,8 +26,8 @@ public class JDiSite {
         jDiHomepage.login(user);
     }
 
-    public static void getUserName() {
-        jDiHomepage.userName();
+    public static void getUserName(String userName) {
+        assertThat(jDiHomepage.userName()).isEqualTo(userName);
     }
 
     public static void openMetalsColorsPage() {
@@ -33,6 +35,6 @@ public class JDiSite {
     }
 
     public static void checkResultOfLogs(MetalsColors metalsColors) {
-        jDiMetalsColorPage.checkLogAfterFill(metalsColors);
+        jDiMetalsColorPage.assertResultLog(metalsColors);
     }
 }
