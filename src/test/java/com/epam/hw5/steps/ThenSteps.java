@@ -47,7 +47,7 @@ public class ThenSteps extends BaseStep {
 
     @Then("Select radiobutton {string}")
     public void selectRadiobutton(String radiobutton) {
-        diffElementPage.radiobutton
+        diffElementPage.getRadiobutton()
                 .stream()
                 .filter(element1 -> element1.getText().equals(radiobutton)).findFirst()
                 .orElseThrow(() -> new RuntimeException(
@@ -57,7 +57,7 @@ public class ThenSteps extends BaseStep {
 
     @Then("Select dropdown {string}")
     public void selectDropdown(String dropdown) {
-        diffElementPage.dropdown
+        diffElementPage.getDropdown()
                 .stream()
                 .filter(element1 -> element1.getText().equals(dropdown)).findFirst()
                 .orElseThrow(() -> new RuntimeException(String.format("Dropdown with name %s not found", dropdown)))
@@ -67,7 +67,7 @@ public class ThenSteps extends BaseStep {
     @Then("Logs {string} is displayed")
     public void logsAreDisplayed(String logs) {
         diffElementPage = new DiffElementPage(driver);
-        diffElementPage.log.forEach(element -> assertTrue(element.isDisplayed()));
+        diffElementPage.getLog().forEach(element -> assertTrue(element.isDisplayed()));
     }
 
     @Then("I click on User Table button in Service dropdown")

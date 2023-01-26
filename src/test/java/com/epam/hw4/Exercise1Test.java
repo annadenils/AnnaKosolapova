@@ -1,11 +1,11 @@
-package com.epam.hw6;
+package com.epam.hw4;
 
 import io.qameta.allure.Feature;
 import io.qameta.allure.Story;
 import org.testng.annotations.Test;
 
 
-public class ExerciseOneTest extends BaseTest {
+public class Exercise1Test extends StartTest {
 
     @Story("Main Page Information Framework")
     @Feature("Main page")
