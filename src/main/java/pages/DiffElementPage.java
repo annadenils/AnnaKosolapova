@@ -15,25 +15,19 @@ public class DiffElementPage {
     }
 
     @FindBy(className = "label-checkbox")
-    public List<WebElement> checkbox;
+    private List<WebElement> checkbox;
 
     @FindBy(className = "label-radio")
-    public List<WebElement> radiobutton;
+    private List<WebElement> radiobutton;
 
     @FindBy(css = ".colors>select > option")
-    public List<WebElement> dropdown;
+    private List<WebElement> dropdown;
 
     @FindBy(css = ".panel-body-list.logs")
-    public List<WebElement> log;
+    private List<WebElement> log;
 
     public List<WebElement> getCheckbox() {
         return checkbox;
-    }
-
-    public WebElement checkbox(String nameCheckbox) {
-        return getCheckbox().stream().filter(element1 -> element1.getText().equals(nameCheckbox))
-                .findFirst().orElseThrow(() -> new RuntimeException(format("Checkbox with name %s not found",
-                        nameCheckbox)));
     }
 
     public List<WebElement> getRadiobutton() {
@@ -46,6 +40,12 @@ public class DiffElementPage {
 
     public List<WebElement> getLog() {
         return log;
+    }
+
+    public WebElement checkbox(String nameCheckbox) {
+        return getCheckbox().stream().filter(element1 -> element1.getText().equals(nameCheckbox))
+                .findFirst().orElseThrow(() -> new RuntimeException(format("Checkbox with name %s not found",
+                        nameCheckbox)));
     }
 
     public WebElement radiobutton(String nameRadiobutton) {

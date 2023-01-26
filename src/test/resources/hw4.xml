@@ -2,13 +2,13 @@
 
 <suite name="hw4" verbose="1" >
     <listeners>
-        <listener class-name="listeners.ScreenshotListener"></listener>
+        <listener class-name="listeners.ScreenshotListener"/>
     </listeners>
     <test name="hw4" >
         <classes>
             <class name="com.epam.hw4.ExerciseOneTest" />
-            <class name="com.epam.hw4.ExerciseFailTest"></class>
-            <class name="com.epam.hw4.ExerciseTwoTest"></class>
+            <class name="com.epam.hw4.ExerciseFailTest"/>
+            <class name="com.epam.hw4.ExerciseTwoTest"/>
         </classes>
     </test>
 </suite>

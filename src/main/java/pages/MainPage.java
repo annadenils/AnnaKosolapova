@@ -27,23 +27,23 @@ public class MainPage {
     @FindBy(id = "user-name")
     private WebElement userName;
 
-    @FindBy(css = "ul[class='uui-navigation nav navbar-nav m-l8']>li")
+    @FindBy(xpath = "//ul[contains(@class,'m-l8')]/li")
     private List<WebElement> headerItems;
 
     @FindBy(className = "benefit-icon")
-    public List<WebElement> iconsItems;
+    private List<WebElement> iconsItems;
 
     @FindBy(className = "benefit-txt")
-    public List<WebElement> iconsTextItems;
+    private List<WebElement> iconsTextItems;
 
     @FindBy(id = "frame")
-    public WebElement frame;
+    private WebElement frame;
 
     @FindBy(id = "frame-button")
-    public WebElement frameButton;
+    private WebElement frameButton;
 
     @FindBy(css = "ul[class='sidebar-menu left']>li")
-    public List<WebElement> leftMenu;
+    private List<WebElement> leftMenu;
 
     public void login(String username, String password1) {
         loginIcon.click();
@@ -56,19 +56,28 @@ public class MainPage {
         return userName;
     }
 
-    public List<WebElement> headerName() {
+    public List<WebElement> getHeaderItems() {
         return headerItems;
     }
 
-    public List<WebElement> iconsItems() {
+    public List<WebElement> getIconsItems() {
         return iconsItems;
     }
 
-    public List<WebElement> iconsTextItems() {
+    public List<WebElement> getIconsTextItems() {
         return iconsTextItems;
     }
 
-    public List<WebElement> leftMenuName() {
+    public WebElement getFrame() {
+        return frame;
+    }
+
+    public WebElement getFrameButton() {
+        return frameButton;
+    }
+
+    public List<WebElement> getLeftMenu() {
         return leftMenu;
     }
+
 }
