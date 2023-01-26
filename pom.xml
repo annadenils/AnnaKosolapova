@@ -9,9 +9,18 @@
     <version>1.0-SNAPSHOT</version>
 
     <properties>
-        <maven.compiler.source>18</maven.compiler.source>
-        <maven.compiler.target>18</maven.compiler.target>
+        <maven.compiler.source>11</maven.compiler.source>
+        <maven.compiler.target>11</maven.compiler.target>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+        <aspectj.version>1.9.9</aspectj.version>
+        <lombok.version>1.18.24</lombok.version>
+        <allure-testng.version>2.20.1</allure-testng.version>
+        <webdrivermanager.version>5.3.1</webdrivermanager.version>
+        <selenium-java.version>4.7.1</selenium-java.version>
+        <assertj-core.version>3.22.0</assertj-core.version>
+        <maven-surefire-common.version>3.0.0-M7</maven-surefire-common.version>
+        <maven-compiler-plugin.version>3.10.1</maven-compiler-plugin.version>
+        <testng.version>7.7.0</testng.version>
     </properties>
 
     <build>
@@ -30,8 +39,46 @@
                 <artifactId>maven-surefire-plugin</artifactId>
                 <version>3.0.0-M7</version>
                 <configuration>
-                    <suiteXmlFiles>${project.basedir}/src/test/resources/${suiteXmlFiles}</suiteXmlFiles>
+                    <suiteXmlFiles>
+                        <suiteXmlFile>${project.basedir}/src/test/resources/${suiteXmlFiles}</suiteXmlFile>
+                    </suiteXmlFiles>
+                    <argLine>-javaagent:"${settings.localRepository}/org/aspectj/aspectjweaver/${aspectj.version}/aspectjweaver-${aspectj.version}.jar"</argLine>
                 </configuration>
+                <dependencies>
+                    <dependency>
+                        <groupId>org.aspectj</groupId>
+                        <artifactId>aspectjweaver</artifactId>
+                        <version>${aspectj.version}</version>
+                    </dependency>
+                </dependencies>
+            </plugin>
+            <plugin>
+                <groupId>io.qameta.allure</groupId>
+                <artifactId>allure-maven</artifactId>
+                <version>2.12.0</version>
+            </plugin>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-checkstyle-plugin</artifactId>
+                <version>3.2.0</version>
+                <configuration>
+                    <configLocation>
+                        https://raw.githubusercontent.com/DmitryKhodakovsky/epam-training-center-code-checkers-configurations/main/checkstyle/checkstyle.xml
+                    </configLocation>
+                    <includeTestSourceDirectory>true</includeTestSourceDirectory>
+                    <consoleOutput>true</consoleOutput>
+                    <failsOnError>true</failsOnError>
+                    <linkXRef>false</linkXRef>
+                </configuration>
+                <executions>
+                    <execution>
+                        <id>validate</id>
+                        <phase>validate</phase>
+                        <goals>
+                            <goal>check</goal>
+                        </goals>
+                    </execution>
+                </executions>
             </plugin>
         </plugins>
     </build>
@@ -40,17 +87,17 @@
         <dependency>
             <groupId>org.testng</groupId>
             <artifactId>testng</artifactId>
-            <version>7.7.0</version>
+            <version>${testng.version}</version>
         </dependency>
         <dependency>
             <groupId>org.apache.maven.plugins</groupId>
             <artifactId>maven-compiler-plugin</artifactId>
-            <version>3.10.1</version>
+            <version>${maven-compiler-plugin.version}</version>
         </dependency>
         <dependency>
             <groupId>org.apache.maven.surefire</groupId>
             <artifactId>maven-surefire-common</artifactId>
-            <version>3.0.0-M7</version>
+            <version>${maven-surefire-common.version}</version>
         </dependency>
         <dependency>
             <groupId>com.calc</groupId>
@@ -62,21 +109,24 @@
         <dependency>
             <groupId>org.assertj</groupId>
             <artifactId>assertj-core</artifactId>
-            <version>3.22.0</version>
+            <version>${assertj-core.version}</version>
         </dependency>
         <dependency>
             <groupId>org.seleniumhq.selenium</groupId>
             <artifactId>selenium-java</artifactId>
-            <version>4.7.1</version>
+            <version>${selenium-java.version}</version>
         </dependency>
         <dependency>
             <groupId>io.github.bonigarcia</groupId>
             <artifactId>webdrivermanager</artifactId>
-            <version>5.3.1</version>
+            <version>${webdrivermanager.version}</version>
             <scope>test</scope>
         </dependency>
-
-
+        <dependency>
+            <groupId>io.qameta.allure</groupId>
+            <artifactId>allure-testng</artifactId>
+            <version>${allure-testng.version}</version>
+        </dependency>
     </dependencies>
     <repositories>
         <repository>
@@ -102,7 +152,7 @@
                 <activeByDefault>false</activeByDefault>
             </activation>
             <properties>
-                <suiteXmlFiles>mult.xml</suiteXmlFiles>
+                <suiteXmlFile>mult.xml</suiteXmlFile>
             </properties>
         </profile>
         <profile>
@@ -144,7 +194,7 @@
         <profile>
             <id>ex1</id>
             <activation>
-                <activeByDefault>true</activeByDefault>
+                <activeByDefault>false</activeByDefault>
             </activation>
             <properties>
                 <suiteXmlFiles>TestEx1.xml</suiteXmlFiles>
@@ -166,6 +216,15 @@
             </activation>
             <properties>
                 <suiteXmlFiles>test3.xml</suiteXmlFiles>
+            </properties>
+        </profile>
+        <profile>
+            <id>hw4</id>
+            <activation>
+                <activeByDefault>true</activeByDefault>
+            </activation>
+            <properties>
+                <suiteXmlFiles>hw4.xml</suiteXmlFiles>
             </properties>
         </profile>
     </profiles>

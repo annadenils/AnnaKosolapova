@@ -1,47 +1,24 @@
 package com.epam.hw2;
 
 import org.openqa.selenium.WebDriver;
-
-import io.github.bonigarcia.wdm.WebDriverManager;
+import org.openqa.selenium.chrome.ChromeDriver;
 import org.testng.annotations.AfterClass;
+import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.BeforeMethod;
 
-import java.util.List;
-
-
-public class ChromeTest {
-
-//    WebDriver driver;
-//
-//    @BeforeClass
-//    void setup() {
-//        WebDriverManager.chromedriver().setup();
-//        driver = new ChromeDriver();
-//        String url = "https://jdi-testing.github.io/jdi-light/index.html";
-//        driver.get(url);
-//    }
-//
-//    @AfterClass
-//    void teardown() {
-//        driver.quit();
-//    }
-
+class ChromeTest {
     public static final String URL = "https://jdi-testing.github.io/jdi-light/index.html";
-    public WebDriver driver;
-
-    @BeforeClass
-    public void beforeClass(){
-        WebDriverManager.chromedriver().setup();
-        driver = WebDriverManager.chromedriver().create();
-    }
+    WebDriver driver;
 
     @BeforeMethod
-    public void setUp(){
+    public void setUp() {
+        driver = new ChromeDriver();
+        driver.manage().window().maximize();
         driver.get(URL);
     }
 
-    @AfterClass
+    @AfterMethod
     void teardown() {
         driver.quit();
     }
