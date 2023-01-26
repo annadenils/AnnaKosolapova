@@ -1,6 +1,7 @@
-package com.epam.hw4.steps;
+package com.epam.hw6.steps;
 
 
+import com.epam.hw6.BaseTest;
 import static com.epam.hw4.BaseTest.diffElementPage;
 import static com.epam.hw4.BaseTest.mainPage;
 import static com.epam.testdata.TestData.iconsText;
@@ -11,17 +12,19 @@ import static org.assertj.core.api.Assertions.assertThat;
 import static org.testng.Assert.assertTrue;
 
 import io.qameta.allure.Step;
-import java.util.List;
-import java.util.stream.Collectors;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.testng.asserts.SoftAssert;
+
+import java.util.List;
+import java.util.stream.Collectors;
+
 
 
 
 public class AssertSteps {
 
-    private final WebDriver driver;
+    protected WebDriver driver;
 
     public AssertSteps(WebDriver driver) {
         this.driver = driver;
@@ -37,85 +40,101 @@ public class AssertSteps {
 
     @Step("assertion login")
     public void assertLogin() {
-        String userName = mainPage.getUserName().getText();
+        String userName = BaseTest.mainPage.getUserName().getText();
         softAssert.assertEquals(userName, "ROMAN IOVLEV");
         softAssert.assertAll();
     }
 
     @Step("Items in header")
     public void headerItems() {
-        int headerCount = mainPage.getHeaderItems().size();
+        int headerCount = BaseTest.mainPage.headerItems.size();
         assertThat(headerCount).isEqualTo(4);
-        List<String> headerItems = mainPage.getHeaderItems()
+        List<String> headerItems = BaseTest.mainPage.headerItems
                 .stream().map(WebElement::getText).collect(Collectors.toList());
         assertThat(headerItems).containsExactlyElementsOf(itemHeader);
-        mainPage.getHeaderItems().forEach(e -> assertTrue(e.isDisplayed()));
+        BaseTest.mainPage.headerItems.forEach(e -> assertTrue(e.isDisplayed()));
     }
 
     @Step("Images on the Index Page")
     public void imagesIndexPage() {
-        int iconsCount = mainPage.getIconsItems().size();
+        int iconsCount = BaseTest.mainPage.iconsItems.size();
         softAssert.assertEquals(iconsCount, 4);
-        mainPage.getIconsItems().forEach(e -> assertTrue(e.isDisplayed()));
+        BaseTest.mainPage.iconsItems.forEach(e -> assertTrue(e.isDisplayed()));
         softAssert.assertAll();
     }
 
     @Step("Text under images on the Index Page")
     public void textUnderImagesPage() {
-        int iconsTextCount = mainPage.getIconsTextItems().size();
+        int iconsTextCount = BaseTest.mainPage.iconsTextItems.size();
         assertThat(iconsTextCount).isEqualTo(4);
-        List<String> textUnderIcons = mainPage.getIconsTextItems()
+        List<String> textUnderIcons = BaseTest.mainPage.iconsTextItems
                 .stream().map(WebElement::getText).collect(Collectors.toList());
         assertThat(textUnderIcons).containsExactlyElementsOf(iconsText);
     }
 
     @Step("Text under images on the Index Page (fail)")
     public void textUnderImagesPageFail() {
-        int iconsTextCount = mainPage.getIconsTextItems().size();
+        int iconsTextCount = BaseTest.mainPage.iconsTextItems.size();
         assertThat(iconsTextCount).isEqualTo(4);
-        List<String> textUnderIcons = mainPage.getIconsTextItems()
+        List<String> textUnderIcons = BaseTest.mainPage.iconsTextItems
                 .stream().map(WebElement::getText).collect(Collectors.toList());
         assertThat(textUnderIcons).containsExactlyElementsOf(iconsTextFail);
     }
 
     @Step("frame is displayed")
     public void frame() {
-        softAssert.assertTrue(mainPage.getFrame().isDisplayed());
+        softAssert.assertTrue(BaseTest.mainPage.frame.isDisplayed());
         softAssert.assertAll();
     }
 
     @Step("Frame button is displayed")
     public void frameButton() {
-        softAssert.assertTrue(mainPage.getFrameButton().isDisplayed());
+        softAssert.assertTrue(BaseTest.mainPage.frameButton.isDisplayed());
         softAssert.assertAll();
     }
 
     @Step("Items in the Left Section")
     public void itemsLeftSection() {
-        int leftMenuCount = mainPage.getLeftMenu().size();
+        int leftMenuCount = BaseTest.mainPage.leftMenu.size();
         assertThat(leftMenuCount).isEqualTo(5);
-        List<String> leftMenuItems = mainPage.getLeftMenu()
+        List<String> leftMenuItems = BaseTest.mainPage.leftMenu
                 .stream().map(WebElement::getText).collect(Collectors.toList());
         assertThat(leftMenuItems).containsExactlyElementsOf(itemLeftMenu);
     }
 
     @Step("Checkbox is selected")
     public void checkboxIsSelected(String element) {
-        softAssert.assertTrue(diffElementPage.checkbox(element).isSelected());
+        softAssert.assertTrue(BaseTest.diffElementPage.checkbox
+                .stream()
+                .filter(e -> e.getText().equals(element))
+                .findFirst().orElseThrow(() -> new RuntimeException("Checkbox with name " + element + " not found"))
+                .isSelected());
     }
 
     @Step("Radiobutton is selected")
     public void radiobuttonIsSelected(String element) {
-        softAssert.assertTrue(diffElementPage.radiobutton(element).isSelected());
+        softAssert.assertTrue(BaseTest.diffElementPage.radiobutton
+                .stream()
+                .filter(element1 -> element1.getText().equals(element))
+                .findFirst().orElseThrow(() -> new RuntimeException("Radiobutton with name " + element + " not found"))
+                .isSelected());
     }
 
     @Step("Dropdown is selected")
     public void dropdownIsSelected(String element) {
-        softAssert.assertTrue(diffElementPage.dropdown(element).isSelected());
+        softAssert.assertTrue(BaseTest.diffElementPage.dropdown
+                .stream()
+                .filter(element1 -> element1.getText().equals(element))
+                .findFirst().orElseThrow(() -> new RuntimeException("Dropdown with name " + element + " not found"))
+                .isSelected());
     }
 
     @Step("Check log text")
     public void checkLogText(String element) {
-        softAssert.assertTrue(diffElementPage.log(element).isDisplayed());
+        softAssert.assertTrue(BaseTest.diffElementPage.log
+                .stream()
+                .filter(element1 -> element1.getText().contains(element))
+                .findFirst().orElseThrow(() -> new RuntimeException("Log: " + element + " not found"))
+                .isDisplayed());
     }
 }
