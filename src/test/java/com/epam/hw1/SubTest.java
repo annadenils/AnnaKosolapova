@@ -7,7 +7,7 @@ import org.testng.annotations.Test;
 public class SubTest extends StartTest {
     @DataProvider
     public static Object[][] subData() {
-        return new Object[][]{
+        return new Object[][] {
                 {7.0, 4.0, 3.0},
                 {67.0, 15.0, 52.0},
                 {568.0, 54.0, 514.0}

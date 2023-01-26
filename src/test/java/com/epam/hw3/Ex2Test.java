@@ -30,26 +30,26 @@ public class Ex2Test extends BaseTest {
         headerPage.clickDiffEl();
 
         //step 6 - Select checkboxes Water, Wind
-        diffElementPage.getCheckbox("Water").click();
-        softAssert.assertTrue(diffElementPage.getCheckbox("Water").isSelected());
+        diffElementPage.checkbox("Water").click();
+        softAssert.assertTrue(diffElementPage.checkbox("Water").isSelected());
 
-        diffElementPage.getCheckbox("Wind").click();
-        softAssert.assertTrue(diffElementPage.getCheckbox("Wind").isSelected());
+        diffElementPage.checkbox("Wind").click();
+        softAssert.assertTrue(diffElementPage.checkbox("Wind").isSelected());
 
         //step 7 - Select radio Selen
-        diffElementPage.getRadiobutton("Selen").click();
-        softAssert.assertTrue(diffElementPage.getRadiobutton("Selen").isSelected());
+        diffElementPage.radiobutton("Selen").click();
+        softAssert.assertTrue(diffElementPage.radiobutton("Selen").isSelected());
 
         //step 8 - Select in dropdown Yellow
-        diffElementPage.getDropdown("Yellow").click();
-        softAssert.assertTrue(diffElementPage.getDropdown("Yellow").isSelected());
+        diffElementPage.dropdown("Yellow").click();
+        softAssert.assertTrue(diffElementPage.dropdown("Yellow").isSelected());
 
         //step 9 -Assert that
         //• for each checkbox there is an individual log row and value is corresponded to the status of checkbox
         //• for radio button there is a log row and value is corresponded to the status of radio button
         //• for dropdown there is a log row and value is corresponded to the selected value.
-        List<String> left = diffElementPage.log.stream().map(WebElement::getText).collect(Collectors.toList());
+        List<String> left = diffElementPage.getLog().stream().map(WebElement::getText).collect(Collectors.toList());
         softAssert.assertTrue(left.contains(String.valueOf(itemLogs)));
-        diffElementPage.log.forEach(e -> assertTrue(e.isDisplayed()));
+        diffElementPage.getLog().forEach(e -> assertTrue(e.isDisplayed()));
     }
 }

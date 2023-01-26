@@ -4,28 +4,19 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="6bd5c8ab-599e-4d00-8265-512d9c9d0c91" name="Changes" comment="homework4 (did fields private)">
+    <list default="true" id="08c181a3-56cc-4cc8-829d-2f8fdf130cc8" name="Changes" comment="с">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/jdi/forms/MetalsColorsForm.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/jdi/forms/MetalsColorsForm.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/jdi/pages/JDiMetalsColorPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/jdi/pages/JDiMetalsColorPage.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/pages/DiffElementPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pages/DiffElementPage.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/pages/HeaderPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pages/HeaderPage.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/pages/MainPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pages/MainPage.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/com/epam/hw1/DivTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/epam/hw1/DivTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/com/epam/hw1/MultTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/epam/hw1/MultTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/com/epam/hw1/StartTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/epam/hw1/StartTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/com/epam/hw1/SubTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/epam/hw1/SubTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/com/epam/hw1/SumTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/epam/hw1/SumTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/com/epam/hw2/ChromeTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/epam/hw2/ChromeTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/com/epam/hw2/TestEx1.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/epam/hw2/TestEx1.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/com/epam/hw2/TestEx2.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/epam/hw2/TestEx2.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/com/epam/hw3/BaseTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/epam/hw3/BaseTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/com/epam/hw3/Ex1Tests.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/epam/hw3/Ex1Tests.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/com/epam/hw3/Ex2Test.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/epam/hw3/Ex2Test.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/com/epam/hw7/JDITest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/epam/hw7/JDiTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/com/epam/hw5/steps/ThenSteps.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/epam/hw5/steps/ThenSteps.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/com/epam/hw6/BaseTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/epam/hw6/BaseTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/com/epam/hw6/DriverFabric.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/epam/hw6/DriverFabric.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/com/epam/hw6/ExerciseOneTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/epam/hw6/ExerciseOneTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/com/epam/hw6/steps/ActionSteps.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/epam/hw6/steps/ActionSteps.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/com/epam/hw6/steps/AssertSteps.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/epam/hw6/steps/AssertSteps.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/testdata/TestData.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/testdata/TestData.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/resources/test.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/resources/test.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/resources/hw4.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/resources/hw4.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -35,7 +26,6 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="XML Properties File" />
         <option value="Class" />
       </list>
     </option>
@@ -46,76 +36,40 @@
   <component name="Git.Settings">
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
-        <entry key="$PROJECT_DIR$" value="homework7" />
+        <entry key="$PROJECT_DIR$" value="main" />
       </map>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
-  <component name="MarkdownSettingsMigration">
-    <option name="stateVersion" value="1" />
-  </component>
   <component name="MavenImportPreferences">
-    <option name="disabledProfiles">
+    <option name="enabledProfiles">
       <list>
+        <option value="Div" />
+        <option value="Mult+Div" />
+        <option value="Sum+Sub" />
+        <option value="hw4" />
+        <option value="Mult" />
+        <option value="hw5" />
+        <option value="AllTests" />
+        <option value="Sum" />
+        <option value="ex2" />
+        <option value="Tests3" />
         <option value="ex1" />
       </list>
     </option>
   </component>
-  <component name="ProblemsViewState">
-    <option name="selectedTabId" value="CurrentFile" />
-  </component>
-  <component name="ProjectId" id="2JAyjBAbKbQbhIf1OKY9v6FUxKv" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
-  <component name="ProjectViewState">
-    <option name="hideEmptyMiddlePackages" value="true" />
-    <option name="showLibraryContents" value="true" />
-  </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;last_directory_selection&quot;: &quot;/Users/anna_kosolapova1/IdeaProjects/Anna_Kosolapova/src/test/java/com/epam/hw7&quot;,
-    &quot;project.structure.last.edited&quot;: &quot;Modules&quot;,
-    &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
-    &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;editor.preferences.gutterIcons&quot;
-  }
-}</component>
-  <component name="RecentsManager">
-    <key name="CreateClassDialog.RecentsKey">
-      <recent name="jdi" />
-      <recent name="com.epam.hw7" />
-    </key>
-  </component>
-  <component name="RunManager">
-    <configuration name="Ex1Tests.test3" type="TestNG" temporary="true" nameIsGenerated="true">
-      <module name="Anna_Kosolapova" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="pages.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="hw3" />
-      <option name="MAIN_CLASS_NAME" value="hw3.Ex1Tests" />
-      <option name="METHOD_NAME" value="test3" />
-      <option name="TEST_OBJECT" value="METHOD" />
-      <properties />
-      <listeners />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
+  <component name="RunManager" selected="TestNG.Ex2Test.ex2Tests">
     <configuration name="Ex2Test.ex2Tests" type="TestNG" temporary="true" nameIsGenerated="true">
       <module name="Anna_Kosolapova" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="hw3.*" />
+          <option name="PATTERN" value="com.epam.hw3.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="PACKAGE_NAME" value="hw3" />
-      <option name="MAIN_CLASS_NAME" value="hw3.Ex2Test" />
+      <option name="PACKAGE_NAME" value="com.epam.hw3" />
+      <option name="MAIN_CLASS_NAME" value="com.epam.hw3.Ex2Test" />
       <option name="METHOD_NAME" value="ex2Tests" />
       <option name="TEST_OBJECT" value="METHOD" />
       <properties />
@@ -124,16 +78,16 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="JDiTest" type="TestNG" temporary="true" nameIsGenerated="true">
+    <configuration name="Exercise1Test" type="TestNG" temporary="true" nameIsGenerated="true">
       <module name="Anna_Kosolapova" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="com.epam.hw7.*" />
+          <option name="PATTERN" value="com.epam.hw4.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="PACKAGE_NAME" value="com.epam.hw7" />
-      <option name="MAIN_CLASS_NAME" value="com.epam.hw7.JDiTest" />
+      <option name="PACKAGE_NAME" value="com.epam.hw4" />
+      <option name="MAIN_CLASS_NAME" value="com.epam.hw4.Exercise1Test" />
       <option name="TEST_OBJECT" value="CLASS" />
       <properties />
       <listeners />
@@ -141,17 +95,17 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="JDiTest.jdiTest" type="TestNG" temporary="true" nameIsGenerated="true">
+    <configuration name="Exercise1Test.exerciseOne" type="TestNG" temporary="true" nameIsGenerated="true">
       <module name="Anna_Kosolapova" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="com.epam.hw7.*" />
+          <option name="PATTERN" value="com.epam.hw4.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="PACKAGE_NAME" value="com.epam.hw7" />
-      <option name="MAIN_CLASS_NAME" value="com.epam.hw7.JDiTest" />
-      <option name="METHOD_NAME" value="jdiTest" />
+      <option name="PACKAGE_NAME" value="com.epam.hw4" />
+      <option name="MAIN_CLASS_NAME" value="com.epam.hw4.Exercise1Test" />
+      <option name="METHOD_NAME" value="exerciseOne" />
       <option name="TEST_OBJECT" value="METHOD" />
       <properties />
       <listeners />
@@ -159,17 +113,35 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="TestEx1.TestsEx1" type="TestNG" temporary="true" nameIsGenerated="true">
+    <configuration name="Exercise2Test.exerciseTwo" type="TestNG" temporary="true" nameIsGenerated="true">
       <module name="Anna_Kosolapova" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="hw2.*" />
+          <option name="PATTERN" value="com.epam.hw4.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="PACKAGE_NAME" value="hw2" />
-      <option name="MAIN_CLASS_NAME" value="hw2.TestEx1" />
-      <option name="METHOD_NAME" value="TestsEx1" />
+      <option name="PACKAGE_NAME" value="com.epam.hw4" />
+      <option name="MAIN_CLASS_NAME" value="com.epam.hw4.Exercise2Test" />
+      <option name="METHOD_NAME" value="exerciseTwo" />
+      <option name="TEST_OBJECT" value="METHOD" />
+      <properties />
+      <listeners />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="ExerciseFailTest.failTest" type="TestNG" temporary="true" nameIsGenerated="true">
+      <module name="Anna_Kosolapova" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.epam.hw4.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.epam.hw4" />
+      <option name="MAIN_CLASS_NAME" value="com.epam.hw4.ExerciseFailTest" />
+      <option name="METHOD_NAME" value="failTest" />
       <option name="TEST_OBJECT" value="METHOD" />
       <properties />
       <listeners />
@@ -179,59 +151,15 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="TestNG.JDiTest.jdiTest" />
-        <item itemvalue="TestNG.JDiTest" />
-        <item itemvalue="TestNG.TestEx1.TestsEx1" />
         <item itemvalue="TestNG.Ex2Test.ex2Tests" />
-        <item itemvalue="TestNG.Ex1Tests.test3" />
+        <item itemvalue="TestNG.Exercise2Test.exerciseTwo" />
+        <item itemvalue="TestNG.Exercise1Test.exerciseOne" />
+        <item itemvalue="TestNG.Exercise1Test" />
+        <item itemvalue="TestNG.ExerciseFailTest.failTest" />
       </list>
     </recent_temporary>
   </component>
-  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
-    <task active="true" id="Default" summary="Default task">
-      <changelist id="6bd5c8ab-599e-4d00-8265-512d9c9d0c91" name="Changes" comment="" />
-      <created>1671535317961</created>
-      <option name="number" value="Default" />
-      <option name="presentableId" value="Default" />
-      <updated>1671535317961</updated>
-    </task>
-    <task id="LOCAL-00001" summary="homework1">
-      <created>1671537494546</created>
-      <option name="number" value="00001" />
-      <option name="presentableId" value="LOCAL-00001" />
-      <option name="project" value="LOCAL" />
-      <updated>1671537494546</updated>
-    </task>
-    <task id="LOCAL-00002" summary="homework 3(example)">
-      <created>1672241780414</created>
-      <option name="number" value="00002" />
-      <option name="presentableId" value="LOCAL-00002" />
-      <option name="project" value="LOCAL" />
-      <updated>1672241780414</updated>
-    </task>
-    <task id="LOCAL-00003" summary="homework 3(smth new)">
-      <created>1672305993993</created>
-      <option name="number" value="00003" />
-      <option name="presentableId" value="LOCAL-00003" />
-      <option name="project" value="LOCAL" />
-      <updated>1672305993993</updated>
-    </task>
-    <task id="LOCAL-00004" summary="homework 3(smth new)">
-      <created>1672307193982</created>
-      <option name="number" value="00004" />
-      <option name="presentableId" value="LOCAL-00004" />
-      <option name="project" value="LOCAL" />
-      <updated>1672307193982</updated>
-    </task>
-    <task id="LOCAL-00005" summary="moved to new package epam.com">
-      <created>1674125453883</created>
-      <option name="number" value="00005" />
-      <option name="presentableId" value="LOCAL-00005" />
-      <option name="project" value="LOCAL" />
-      <updated>1674125453883</updated>
-    </task>
-    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -245,12 +173,15 @@
       </map>
     </option>
   </component>
-  <component name="VcsManagerConfiguration">
-    <MESSAGE value="homework1" />
-    <MESSAGE value="homework 3(example)" />
-    <MESSAGE value="homework 3(smth new)" />
-    <MESSAGE value="moved to new package epam.com" />
-    <option name="LAST_COMMIT_MESSAGE" value="moved to new package epam.com" />
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <breakpoint enabled="true" type="java-exception">
+          <properties class="java.lang.NullPointerException" package="java.lang" />
+          <option name="timeStamp" value="1" />
+        </breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/Anna_Kosolapova$Scenario__Check_Main_Page.ic" NAME="Scenario: Check Main Page Coverage Results" MODIFIED="1673436478383" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">

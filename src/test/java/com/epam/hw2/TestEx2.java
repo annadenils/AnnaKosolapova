@@ -1,28 +1,28 @@
 package com.epam.hw2;
 
-import static org.testng.Assert.assertEquals;
-import static org.testng.Assert.assertTrue;
-
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import org.testng.annotations.Test;
+import org.testng.asserts.SoftAssert;
+
 
 public class TestEx2 extends ChromeTest {
+    SoftAssert softAssert = new SoftAssert();
 
     @Test
-    public void TestsEx2() {
+    public void testsEx2() {
         homepage();
         login();
-        difElements();
+        checkDifElements();
         checkboxWaterWind();
         buttonSelen();
         dropdownYellow();
-        log();
+        checkLog();
     }
 
     //step 2 - Assert Browser title
     public void homepage() {
-        assertEquals(driver.getTitle(), "Home Page");
+        softAssert.assertEquals(driver.getTitle(), "Home Page");
     }
 
     //step 3 - Perform login
@@ -33,59 +33,59 @@ public class TestEx2 extends ChromeTest {
         driver.findElement(By.id("password")).sendKeys("Jdi1234");
         driver.findElement(By.id("login-button")).click();
         WebElement loginname = driver.findElement(By.cssSelector("#user-name"));
-        assertEquals(loginname.getText(), "ROMAN IOVLEV");
+        softAssert.assertEquals(loginname.getText(), "ROMAN IOVLEV");
+        softAssert.assertAll();
     }
 
     //step 5 - Open through the header menu Service -> Different Elements Page
-    public void difElements() {
+    public void checkDifElements() {
         driver.findElement(By.className("dropdown-toggle")).click();
-        //driver.findElement(By.linkText("Service")).click();
         driver.findElement(By.partialLinkText("DIFFERENT ELEMENTS")).click();
-        //cssSelector("ul#dropdown-menu li:nth-of-type(8)")
-        assertEquals(driver.getTitle(), "Different Elements");
+        softAssert.assertEquals(driver.getTitle(), "Different Elements");
     }
 
     //step 6 - Select checkboxes Water, Wind
     public void checkboxWaterWind() {
         WebElement water = driver.findElement(By.xpath("//label[text()[contains(., ' Water')]]"));
         water.click();
-        water.isSelected();
+        softAssert.assertTrue(water.isSelected());
         WebElement wind = driver.findElement(By.xpath("//label[text()[contains(., ' Wind')]]"));
         wind.click();
-        wind.isSelected();
+        softAssert.assertTrue(wind.isSelected());
+        softAssert.assertAll();
     }
 
     //step 7 - Select radio Selen
     public void buttonSelen() {
         WebElement selen = driver.findElement(By.xpath("//label[text()[contains(., ' Selen')]]"));
         selen.click();
-        selen.isSelected();
+        softAssert.assertTrue(selen.isSelected());
     }
 
     //step 8 - Select in dropdown Yellow
     public void dropdownYellow() {
         WebElement yellow = driver.findElement(By.cssSelector("select > option:nth-child(4)"));
         yellow.click();
-        assertTrue(yellow.isSelected());
-
+        softAssert.assertTrue(yellow.isSelected());
     }
 
     //step 9 -Assert that
     //• for each checkbox there is an individual log row and value is corresponded to the status of checkbox
     //• for radio button there is a log row and value is corresponded to the status of radio button
     //• for dropdown there is a log row and value is corresponded to the selected value.
-    public void log() {
+    public void checkLog() {
         WebElement logWater = driver.findElement(By.xpath("//*[contains(text(),"
                 + "'Water: condition changed to true')]"));
-        logWater.isDisplayed();
+        softAssert.assertTrue(logWater.isDisplayed());
         WebElement logWind = driver.findElement(By.xpath("//*[contains(text(),"
                 + "'Wind: condition changed to true')]"));
-        logWind.isDisplayed();
+        softAssert.assertTrue(logWind.isDisplayed());
         WebElement logSelen = driver.findElement(By.xpath("//*[contains(text(),"
                 + "'metal: value changed to  Selen')]"));
-        logSelen.isDisplayed();
+        softAssert.assertTrue(logSelen.isDisplayed());
         WebElement logYellow = driver.findElement(By.xpath("//*[contains(text(),"
                 + "'Colors: value changed to Yellow')]"));
-        logYellow.isDisplayed();
+        softAssert.assertTrue(logYellow.isDisplayed());
+        softAssert.assertAll();
     }
 }
