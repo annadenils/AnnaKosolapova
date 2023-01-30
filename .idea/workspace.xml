@@ -4,19 +4,16 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="08c181a3-56cc-4cc8-829d-2f8fdf130cc8" name="Changes" comment="с">
+    <list default="true" id="08c181a3-56cc-4cc8-829d-2f8fdf130cc8" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/com/epam/hw3/BaseTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/epam/hw3/BaseTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/com/epam/hw3/Ex1Tests.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/epam/hw3/Ex1Tests.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/com/epam/hw3/Ex2Test.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/epam/hw3/Ex2Test.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/com/epam/hw5/steps/ThenSteps.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/epam/hw5/steps/ThenSteps.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/com/epam/hw6/BaseTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/epam/hw6/BaseTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/com/epam/hw6/DriverFabric.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/epam/hw6/DriverFabric.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/com/epam/hw6/ExerciseOneTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/epam/hw6/ExerciseOneTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/com/epam/hw6/steps/ActionSteps.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/epam/hw6/steps/ActionSteps.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/com/epam/hw6/steps/AssertSteps.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/epam/hw6/steps/AssertSteps.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/testdata/TestData.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/testdata/TestData.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/resources/hw4.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/resources/hw4.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/jdi/DataMetalsColors.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/jdi/DataMetalsColors.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/jdi/JDiSite.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/jdi/JDiSite.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/jdi/forms/MetalsColorsForm.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/jdi/forms/MetalsColorsForm.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/jdi/forms/MetalsColorsInt.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/jdi/forms/MetalsColorsInt.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/jdi/objects/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/jdi/objects/User.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/jdi/pages/JDiMetalsColorPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/jdi/pages/JDiMetalsColorPage.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/com/epam/hw7/JDiTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/epam/hw7/JDiTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -27,6 +24,7 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="Class" />
+        <option value="Interface" />
       </list>
     </option>
   </component>
@@ -41,25 +39,13 @@
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
-  <component name="MavenImportPreferences">
-    <option name="enabledProfiles">
-      <list>
-        <option value="Div" />
-        <option value="Mult+Div" />
-        <option value="Sum+Sub" />
-        <option value="hw4" />
-        <option value="Mult" />
-        <option value="hw5" />
-        <option value="AllTests" />
-        <option value="Sum" />
-        <option value="ex2" />
-        <option value="Tests3" />
-        <option value="ex1" />
-      </list>
-    </option>
-  </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
-  <component name="RunManager" selected="TestNG.Ex2Test.ex2Tests">
+  <component name="RecentsManager">
+    <key name="ExtractSuperBase.RECENT_KEYS">
+      <recent name="jdi.forms" />
+    </key>
+  </component>
+  <component name="RunManager" selected="TestNG.JDiTest.jdiTest">
     <configuration name="Ex2Test.ex2Tests" type="TestNG" temporary="true" nameIsGenerated="true">
       <module name="Anna_Kosolapova" />
       <extension name="coverage">
@@ -131,17 +117,17 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="ExerciseFailTest.failTest" type="TestNG" temporary="true" nameIsGenerated="true">
+    <configuration name="JDiTest.jdiTest" type="TestNG" temporary="true" nameIsGenerated="true">
       <module name="Anna_Kosolapova" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="com.epam.hw4.*" />
+          <option name="PATTERN" value="com.epam.hw7.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="PACKAGE_NAME" value="com.epam.hw4" />
-      <option name="MAIN_CLASS_NAME" value="com.epam.hw4.ExerciseFailTest" />
-      <option name="METHOD_NAME" value="failTest" />
+      <option name="PACKAGE_NAME" value="com.epam.hw7" />
+      <option name="MAIN_CLASS_NAME" value="com.epam.hw7.JDiTest" />
+      <option name="METHOD_NAME" value="jdiTest" />
       <option name="TEST_OBJECT" value="METHOD" />
       <properties />
       <listeners />
@@ -151,11 +137,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="TestNG.JDiTest.jdiTest" />
         <item itemvalue="TestNG.Ex2Test.ex2Tests" />
         <item itemvalue="TestNG.Exercise2Test.exerciseTwo" />
         <item itemvalue="TestNG.Exercise1Test.exerciseOne" />
         <item itemvalue="TestNG.Exercise1Test" />
-        <item itemvalue="TestNG.ExerciseFailTest.failTest" />
       </list>
     </recent_temporary>
   </component>
