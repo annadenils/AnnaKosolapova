@@ -28,7 +28,7 @@ public class JDiTest {
 
     @Test(dataProvider = "dataMetalsColors", dataProviderClass = DataMetalsColors.class)
     public void jdiTest(MetalsColors metalsColors) {
-        JDiSite.getUserName(ROMAN.getFullName());
+        JDiSite.checkUserName(ROMAN.getFullName());
         JDiSite.openMetalsColorsPage();
         JDiSite.jDiMetalsColorPage.fillMetalColorsForm(metalsColors);
         JDiSite.checkResultOfLogs(metalsColors);

@@ -1,13 +1,13 @@
 package jdi;
 
+import static org.assertj.core.api.Assertions.assertThat;
+
 import com.epam.jdi.light.elements.pageobjects.annotations.JSite;
 import com.epam.jdi.light.elements.pageobjects.annotations.Url;
 import jdi.objects.MetalsColors;
 import jdi.objects.User;
 import jdi.pages.JDiHomepage;
 import jdi.pages.JDiMetalsColorPage;
-
-import static org.assertj.core.api.Assertions.assertThat;
 
 @JSite("https://jdi-testing.github.io/jdi-light/")
 public class JDiSite {
@@ -26,7 +26,7 @@ public class JDiSite {
         jDiHomepage.login(user);
     }
 
-    public static void getUserName(String userName) {
+    public static void checkUserName(String userName) {
         assertThat(jDiHomepage.userName()).isEqualTo(userName);
     }
 

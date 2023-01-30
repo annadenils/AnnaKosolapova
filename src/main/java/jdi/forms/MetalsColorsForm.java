@@ -1,5 +1,6 @@
 package jdi.forms;
 
+import com.epam.jdi.light.common.JDIAction;
 import com.epam.jdi.light.elements.complex.Checklist;
 import com.epam.jdi.light.elements.complex.dropdown.Dropdown;
 import com.epam.jdi.light.elements.composite.Form;
@@ -9,7 +10,7 @@ import com.epam.jdi.light.ui.html.elements.common.Button;
 import com.epam.jdi.light.ui.html.elements.complex.RadioButtons;
 import jdi.objects.MetalsColors;
 
-public class MetalsColorsForm extends Form<MetalsColorsForm> implements MetalsColorsInt {
+public class MetalsColorsForm extends Form<MetalsColors> {
 
     @FindBy(css = "#elements-checklist input")
     public Checklist element;
@@ -47,5 +48,4 @@ public class MetalsColorsForm extends Form<MetalsColorsForm> implements MetalsCo
         metalsColors.getVegetable().forEach(saladList::select);
         submit.click();
     }
-
 }

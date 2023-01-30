@@ -2,7 +2,6 @@ package jdi.objects;
 
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.jdiai.tools.DataClass;
-
 import java.util.ArrayList;
 import java.util.List;
 
